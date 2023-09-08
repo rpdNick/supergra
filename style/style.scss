@@ -50,16 +50,21 @@ a {
         0px 2px 4px 0px rgba(0, 0, 0, 0.32),
         0px 0px 1px 0px rgba(0, 0, 0, 0.04);
 
-    .ception {
+    .ception,
+    .icon {
         position: relative;
         color: inherit;
         z-index: 2;
     }
 
     &.circular {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         min-width: 56px;
         min-height: 56px;
         border-radius: 50%;
+        padding: 16px;
     }
 
     &::before {
@@ -91,6 +96,26 @@ a {
             opacity: 1;
             background: $gradient-hover;
         }
+    }
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.icon-clock {
+        background-image: url(../img/clock.svg);
+    }
+
+    &.icon-profile {
+        background-image: url(../img/profile.svg);
+    }
+
+    &.icon-arrow-right {
+        background-image: url(../img/arrow-right.svg);
     }
 }
 
@@ -126,23 +151,6 @@ a {
     background: rgba(15, 15, 21, 0.6);
 }
 
-// .divider {
-//     position: relative;
-
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         width: 114vw;
-//         top: 50%;
-//         transform: translateY(-50%);
-//         left: -14vw;
-//         left: 0;
-//         right: 0;
-//         height: 1px;
-//         background: rgba(255, 255, 255, 0.20);
-//     }
-// }
-
 // .marked {
 //     position: relative;
 
@@ -171,6 +179,72 @@ a {
     text-shadow:
         0px 0px 127px rgba(49, 119, 255, 0.5),
         0px 0px 33px rgba(49, 119, 255, 0.7);
+}
+
+.slider-control {
+    position: relative;
+    top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+
+    &.center {
+        margin: 0 auto;
+    }
+
+    .slider-button-prev,
+    .slider-button-next {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        transition: 0.3s;
+        cursor: pointer;
+        background-color: $color-white;
+
+        &.swiper-button-disabled {
+            background-color: #a291a7;
+            cursor: default;
+        }
+    }
+
+    .slider-button-next {
+        -webkit-mask-image: url(../img/arrow-next.svg);
+        mask-image: url(../img/arrow-next.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        order: 3;
+    }
+
+    .slider-button-prev {
+        -webkit-mask-image: url(../img/arrow-prew.svg);
+        mask-image: url(../img/arrow-prew.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        order: 1;
+    }
+
+    .swiper-pagination {
+        position: unset;
+        order: 2;
+
+        .swiper-pagination-bullet {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid #fff;
+            transition: $transition;
+            opacity: 1;
+
+            &.swiper-pagination-bullet-active {
+                background: #ffffff;
+            }
+        }
+    }
 }
 
 body {
@@ -734,5 +808,83 @@ section {
 }
 
 .vacancy-slider {
+    padding: 60px 0;
 
+    .swiper-slide {
+        max-width: 456px;
+
+        .vacancy_card {
+            padding: 24px;
+            border-radius: 24px;
+            border: 1px solid rgba(15, 15, 21, 0.4);
+            background: rgba(15, 15, 21, 0.6);
+            backdrop-filter: blur(20px);
+
+            .card_header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+                .vacancy_name {
+                    color: $color-white;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 36px;
+                    margin-right: 20px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .icon-hot {
+                    width: 58px;
+                }
+            }
+
+            .dscription {
+                margin-top: 20px;
+                color: #d2d2d4;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .card_footer {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                .info {
+                    display: flex;
+                    gap: 12px;
+
+                    .info_item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #747477;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 20px;
+
+                        .icon {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
