@@ -10,6 +10,21 @@ $color-white: #fff;
 $color-primary: #eb008b;
 $color-gay: #a6a6ac;
 $dark-bg: rgba(15, 15, 21, 0.6);
+$color-blue: #624bff;
+$gradient-pink-blue: linear-gradient(
+    333deg,
+    rgba(62, 123, 250, 0.9) 25.31%,
+    rgba(102, 0, 204, 0.8) 50.31%,
+    rgba(255, 16, 117, 0.8) 77.4%,
+    rgba(255, 29, 219, 0.8) 100%
+);
+$gradient_pink_blue_bonuses: linear-gradient(
+    333deg,
+    rgba(62, 123, 250, 0.9) 25.31%,
+    rgba(102, 0, 204, 0.8) 50.31%,
+    rgba(255, 16, 117, 0.8) 77.4%,
+    rgba(255, 29, 219, 0.8) 100%
+);
 $gradient-primary: linear-gradient(135deg, #ff3b3b 0%, #60c 100%);
 $gradient-secondary: linear-gradient(135deg, #73dfe7 0%, #0063f7 100%);
 $gradient-hover: linear-gradient(135deg, #7024c4 0%, #60c 32.06%, #8e40dd 100%);
@@ -70,6 +85,22 @@ a {
             opacity: 1;
             background: $gradient-hover;
         }
+    }
+}
+
+.blur-circle {
+    border-radius: 50%;
+
+    &.blue {
+        background: $color-blue;
+    }
+
+    &.gradient_pink_blue_bonuses {
+        background: $gradient_pink_blue_bonuses;
+    }
+
+    &.gradient_pink_blue {
+        background: $gradient-pink-blue;
     }
 }
 
@@ -162,17 +193,6 @@ main {
             left: calc(-953px / 2);
             top: calc(-953px / 2);
             transform: rotate(-90deg);
-            border-radius: 953px;
-            background: var(
-                --gradients-pink-blue-bonuses,
-                linear-gradient(
-                    333deg,
-                    rgba(62, 123, 250, 0.9) 25.31%,
-                    rgba(102, 0, 204, 0.8) 50.31%,
-                    rgba(255, 16, 117, 0.8) 77.4%,
-                    rgba(255, 29, 219, 0.8) 100%
-                )
-            );
             filter: blur(200px);
             z-index: -1;
         }
@@ -184,7 +204,6 @@ main {
             top: calc(-953px / 2);
             transform: rotate(-90deg);
             border-radius: 953px;
-            background: #624bff;
             filter: blur(200px);
             z-index: -1;
         }
@@ -293,6 +312,49 @@ section {
     .section_wrap {
         max-width: 1400px;
         margin: 0 auto;
+    }
+
+    .transparent_cards_wrap {
+        position: relative;
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        z-index: 1;
+
+        .transparent_cards_item {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            width: 100%;
+            min-width: 400px;
+            max-width: 453px;
+            padding: 40px 20px 40px 32px;
+            border-radius: 40px;
+
+            .image_holder {
+                min-width: 120px;
+                max-width: 120px;
+                height: 120px;
+                overflow: hidden;
+
+                > img {
+                    display: block;
+                    margin: 0 auto;
+                    object-fit: contain;
+                }
+            }
+
+            .description {
+                color: $color-white;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 36px;
+            }
+        }
     }
 }
 
@@ -441,8 +503,6 @@ section {
         width: 800px;
         height: 800px;
         transform: rotate(-90deg);
-        border-radius: 50%;
-        background: #624bff;
         filter: blur(200px);
         left: calc(-800px / 2);
         top: 0;
@@ -451,49 +511,6 @@ section {
 
 .advantages {
     padding: 160px 0;
-
-    .advantages_wrap {
-        position: relative;
-        margin-top: 60px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        z-index: 1;
-
-        .advantages_item {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-            width: 100%;
-            min-width: 400px;
-            max-width: 453px;
-            padding: 40px 20px 40px 32px;
-            border-radius: 40px;
-
-            .image_holder {
-                min-width: 120px;
-                max-width: 120px;
-                height: 120px;
-                overflow: hidden;
-
-                > img {
-                    display: block;
-                    margin: 0 auto;
-                    object-fit: contain;
-                }
-            }
-
-            .description {
-                color: $color-white;
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 36px;
-            }
-        }
-    }
 
     .advantages_curve_line_left {
         top: -185px;
@@ -514,21 +531,13 @@ section {
     }
 
     .blur-circle {
-        width: 853px;
-        height: 853px;
+        width: 953px;
+        height: 953px;
         transform: rotate(-90deg);
-        border-radius: 50%;
         filter: blur(300px);
-        background: linear-gradient(
-            333deg,
-            rgba(62, 123, 250, 0.9) 25.31%,
-            rgba(102, 0, 204, 0.8) 50.31%,
-            rgba(255, 16, 117, 0.8) 77.4%,
-            rgba(255, 29, 219, 0.8) 100%
-        );
         right: calc(-853px / 4);
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-10%);
     }
 }
 
@@ -549,8 +558,6 @@ section {
         height: 810px;
         transform: rotate(-90deg);
         flex-shrink: 0;
-        border-radius: 810px;
-        background: #624bff;
         filter: blur(200px);
         z-index: -1;
     }
@@ -560,12 +567,14 @@ section {
     padding-bottom: 160px;
 
     .valuables_wrap {
+        position: relative;
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin-top: 60px;
+        z-index: 1;
 
         .card_item {
             display: flex;
@@ -626,26 +635,45 @@ section {
     }
 
     .blur-circle {
-        top: -60%;
+        top: 0;
         right: (-853px / 4);
         width: 853px;
         height: 853px;
         transform: rotate(90deg);
         flex-shrink: 0;
-        border-radius: 953px;
-        background: var(
-            --gradients-pink-blue-bonuses,
-            linear-gradient(
-                333deg,
-                rgba(62, 123, 250, 0.9) 25.31%,
-                rgba(102, 0, 204, 0.8) 50.31%,
-                rgba(255, 16, 117, 0.8) 77.4%,
-                rgba(255, 29, 219, 0.8) 100%
-            )
-        );
         filter: blur(300px);
         z-index: -1;
     }
+}
+
+.why_choose_us {
+    padding: 120px 0;
+
+    .blur-circle {
+        top: -140px;
+        left: -100px;
+        width: 670px;
+        height: 670px;
+        transform: rotate(-90deg);
+        flex-shrink: 0;
+        filter: blur(200px);
+    }
+
+    .curve_line_left {
+        max-width: 1000px;
+        left: calc(-800px / 2);
+        top: -300px;
+    }
+
+    .curve_line_right {
+        max-width: 800px;
+        right: -150px;
+        top: 150px;
+    }
+}
+
+.vacancy {
+    padding: 160px 0;
 }
 
 /** Sliders */
@@ -659,6 +687,7 @@ section {
 
         .swiper-slide {
             position: relative;
+            min-width: 217px;
             max-width: 217px;
             height: calc((100% - 20px) / 2) !important;
 

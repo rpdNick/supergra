@@ -1,10 +1,11 @@
 function initSlider(sliderElement, sliderOptions) {
+  console.log(sliderOptions)
   let swiper = new Swiper(sliderElement, sliderOptions);
   return swiper;
 }
 
 const providersSliderOptions = {
-  slidesPerView: 6,
+  slidesPerView: 'auto',
   grid: {
     rows: 2,
     fill: "row",

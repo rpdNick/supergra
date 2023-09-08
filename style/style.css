@@ -53,6 +53,19 @@ a {
   background: linear-gradient(135deg, #7024c4 0%, #60c 32.06%, #8e40dd 100%);
 }
 
+.blur-circle {
+  border-radius: 50%;
+}
+.blur-circle.blue {
+  background: #624bff;
+}
+.blur-circle.gradient_pink_blue_bonuses {
+  background: linear-gradient(333deg, rgba(62, 123, 250, 0.9) 25.31%, rgba(102, 0, 204, 0.8) 50.31%, rgba(255, 16, 117, 0.8) 77.4%, rgba(255, 29, 219, 0.8) 100%);
+}
+.blur-circle.gradient_pink_blue {
+  background: linear-gradient(333deg, rgba(62, 123, 250, 0.9) 25.31%, rgba(102, 0, 204, 0.8) 50.31%, rgba(255, 16, 117, 0.8) 77.4%, rgba(255, 29, 219, 0.8) 100%);
+}
+
 .transparent_box {
   background: rgba(196, 196, 196, 0.01);
   box-shadow: 0px 0.19px 7.5px 0px rgba(227, 222, 255, 0.2) inset, 0px 0.7px 3.4px 0px rgba(154, 146, 210, 0.3) inset, 0px 18.3px 18.7px -9px rgba(202, 172, 255, 0.3) inset, 0px -15px 12.7px -12px rgba(96, 68, 144, 0.3) inset, 0px 1.4px 2px -0.7px #fff inset, 0px 7.3px 10.5px -6.7px rgba(255, 255, 255, 0.5) inset;
@@ -118,8 +131,6 @@ main .blur-circle.top-left {
   left: -476.5px;
   top: -476.5px;
   transform: rotate(-90deg);
-  border-radius: 953px;
-  background: var(--gradients-pink-blue-bonuses, linear-gradient(333deg, rgba(62, 123, 250, 0.9) 25.31%, rgba(102, 0, 204, 0.8) 50.31%, rgba(255, 16, 117, 0.8) 77.4%, rgba(255, 29, 219, 0.8) 100%));
   filter: blur(200px);
   z-index: -1;
 }
@@ -130,7 +141,6 @@ main .blur-circle.top-right {
   top: -476.5px;
   transform: rotate(-90deg);
   border-radius: 953px;
-  background: #624bff;
   filter: blur(200px);
   z-index: -1;
 }
@@ -225,6 +235,45 @@ section .title {
 section .section_wrap {
   max-width: 1400px;
   margin: 0 auto;
+}
+section .transparent_cards_wrap {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+section .transparent_cards_wrap .transparent_cards_item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  min-width: 400px;
+  max-width: 453px;
+  padding: 40px 20px 40px 32px;
+  border-radius: 40px;
+}
+section .transparent_cards_wrap .transparent_cards_item .image_holder {
+  min-width: 120px;
+  max-width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+section .transparent_cards_wrap .transparent_cards_item .image_holder > img {
+  display: block;
+  margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section .transparent_cards_wrap .transparent_cards_item .description {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
 }
 
 .main_screen {
@@ -339,8 +388,6 @@ section .section_wrap {
   width: 800px;
   height: 800px;
   transform: rotate(-90deg);
-  border-radius: 50%;
-  background: #624bff;
   filter: blur(200px);
   left: -400px;
   top: 0;
@@ -348,45 +395,6 @@ section .section_wrap {
 
 .advantages {
   padding: 160px 0;
-}
-.advantages .advantages_wrap {
-  position: relative;
-  margin-top: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  z-index: 1;
-}
-.advantages .advantages_wrap .advantages_item {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  width: 100%;
-  min-width: 400px;
-  max-width: 453px;
-  padding: 40px 20px 40px 32px;
-  border-radius: 40px;
-}
-.advantages .advantages_wrap .advantages_item .image_holder {
-  min-width: 120px;
-  max-width: 120px;
-  height: 120px;
-  overflow: hidden;
-}
-.advantages .advantages_wrap .advantages_item .image_holder > img {
-  display: block;
-  margin: 0 auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.advantages .advantages_wrap .advantages_item .description {
-  color: #fff;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 36px;
 }
 .advantages .advantages_curve_line_left {
   top: -185px;
@@ -404,15 +412,13 @@ section .section_wrap {
   left: -75px;
 }
 .advantages .blur-circle {
-  width: 853px;
-  height: 853px;
+  width: 953px;
+  height: 953px;
   transform: rotate(-90deg);
-  border-radius: 50%;
   filter: blur(300px);
-  background: linear-gradient(333deg, rgba(62, 123, 250, 0.9) 25.31%, rgba(102, 0, 204, 0.8) 50.31%, rgba(255, 16, 117, 0.8) 77.4%, rgba(255, 29, 219, 0.8) 100%);
   right: -213.25px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-10%);
 }
 
 .partners {
@@ -431,8 +437,6 @@ section .section_wrap {
   height: 810px;
   transform: rotate(-90deg);
   flex-shrink: 0;
-  border-radius: 810px;
-  background: #624bff;
   filter: blur(200px);
   z-index: -1;
 }
@@ -441,12 +445,14 @@ section .section_wrap {
   padding-bottom: 160px;
 }
 .valuables .valuables_wrap {
+  position: relative;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 60px;
+  z-index: 1;
 }
 .valuables .valuables_wrap .card_item {
   display: flex;
@@ -498,16 +504,41 @@ section .section_wrap {
   text-overflow: ellipsis;
 }
 .valuables .blur-circle {
-  top: -60%;
+  top: 0;
   right: -213.25px;
   width: 853px;
   height: 853px;
   transform: rotate(90deg);
   flex-shrink: 0;
-  border-radius: 953px;
-  background: var(--gradients-pink-blue-bonuses, linear-gradient(333deg, rgba(62, 123, 250, 0.9) 25.31%, rgba(102, 0, 204, 0.8) 50.31%, rgba(255, 16, 117, 0.8) 77.4%, rgba(255, 29, 219, 0.8) 100%));
   filter: blur(300px);
   z-index: -1;
+}
+
+.why_choose_us {
+  padding: 120px 0;
+}
+.why_choose_us .blur-circle {
+  top: -140px;
+  left: -100px;
+  width: 670px;
+  height: 670px;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+  filter: blur(200px);
+}
+.why_choose_us .curve_line_left {
+  max-width: 1000px;
+  left: -400px;
+  top: -300px;
+}
+.why_choose_us .curve_line_right {
+  max-width: 800px;
+  right: -150px;
+  top: 150px;
+}
+
+.vacancy {
+  padding: 160px 0;
 }
 
 /** Sliders */
@@ -520,6 +551,7 @@ section .section_wrap {
 }
 .partners-slider .swiper-wrapper .swiper-slide {
   position: relative;
+  min-width: 217px;
   max-width: 217px;
   height: calc((100% - 20px) / 2) !important;
 }
