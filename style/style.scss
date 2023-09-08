@@ -56,6 +56,12 @@ a {
         z-index: 2;
     }
 
+    &.circular {
+        min-width: 56px;
+        min-height: 56px;
+        border-radius: 50%;
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -119,6 +125,23 @@ a {
 .dark_bg {
     background: rgba(15, 15, 21, 0.6);
 }
+
+// .divider {
+//     position: relative;
+
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         width: 114vw;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         left: -14vw;
+//         left: 0;
+//         right: 0;
+//         height: 1px;
+//         background: rgba(255, 255, 255, 0.20);
+//     }
+// }
 
 // .marked {
 //     position: relative;
@@ -666,7 +689,7 @@ section {
     }
 
     .curve_line_right {
-        max-width: 800px;
+        width: 800px;
         right: -150px;
         top: 150px;
     }
@@ -687,14 +710,14 @@ section {
 
         .swiper-slide {
             position: relative;
-            min-width: 217px;
-            max-width: 217px;
+            min-width: 216px;
+            max-width: 216px;
             height: calc((100% - 20px) / 2) !important;
 
             .item_provider_game {
                 display: flex;
                 align-items: center;
-                width: 217px;
+                width: 216px;
                 height: 120px;
                 border-radius: 24px;
                 border: 1px solid rgba(15, 15, 21, 0.4);
@@ -708,4 +731,8 @@ section {
             }
         }
     }
+}
+
+.vacancy-slider {
+
 }

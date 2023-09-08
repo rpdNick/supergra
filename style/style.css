@@ -27,6 +27,11 @@ a {
   color: inherit;
   z-index: 2;
 }
+.button.circular {
+  min-width: 56px;
+  min-height: 56px;
+  border-radius: 50%;
+}
 .button::before {
   content: "";
   position: absolute;
@@ -532,7 +537,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   top: -300px;
 }
 .why_choose_us .curve_line_right {
-  max-width: 800px;
+  width: 800px;
   right: -150px;
   top: 150px;
 }
@@ -551,14 +556,14 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 }
 .partners-slider .swiper-wrapper .swiper-slide {
   position: relative;
-  min-width: 217px;
-  max-width: 217px;
+  min-width: 216px;
+  max-width: 216px;
   height: calc((100% - 20px) / 2) !important;
 }
 .partners-slider .swiper-wrapper .swiper-slide .item_provider_game {
   display: flex;
   align-items: center;
-  width: 217px;
+  width: 216px;
   height: 120px;
   border-radius: 24px;
   border: 1px solid rgba(15, 15, 21, 0.4);

@@ -8,7 +8,7 @@ const providersSliderOptions = {
   slidesPerView: 'auto',
   grid: {
     rows: 2,
-    fill: "row",
+    fill: "column",
   },
   
   spaceBetween: 20,
