@@ -641,6 +641,16 @@ section {
 .partners {
     padding-bottom: 160px;
 
+    .flex_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .slider-control {
+           top: unset;
+        }
+    }
+
     .slider_wrap {
         margin-top: 60px;
     }
@@ -747,10 +757,10 @@ section {
     padding: 120px 0;
 
     .blur-circle {
-        top: -140px;
-        left: -100px;
-        width: 670px;
-        height: 670px;
+        top: 0;
+        left: calc(-1016px / 4);
+        width: 1016px;
+        height: 100%;
         transform: rotate(-90deg);
         flex-shrink: 0;
         filter: blur(200px);

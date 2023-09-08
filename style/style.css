@@ -511,6 +511,14 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 .partners {
   padding-bottom: 160px;
 }
+.partners .flex_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partners .flex_wrap .slider-control {
+  top: unset;
+}
 .partners .slider_wrap {
   margin-top: 60px;
 }
@@ -605,10 +613,10 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   padding: 120px 0;
 }
 .why_choose_us .blur-circle {
-  top: -140px;
-  left: -100px;
-  width: 670px;
-  height: 670px;
+  top: 0;
+  left: -254px;
+  width: 1016px;
+  height: 100%;
   transform: rotate(-90deg);
   flex-shrink: 0;
   filter: blur(200px);

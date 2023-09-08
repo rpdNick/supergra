@@ -12,6 +12,14 @@ const providersSliderOptions = {
   },
 
   spaceBetween: 20,
+  pagination: {
+    el: ".partners .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".partners .slider-button-next",
+    prevEl: ".partners .slider-button-prev",
+  },
 };
 
 const vacancySliderOptions = {
