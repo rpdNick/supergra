@@ -1,11 +1,11 @@
 function initSlider(sliderElement, sliderOptions) {
-  console.log(sliderOptions);
   let swiper = new Swiper(sliderElement, sliderOptions);
   return swiper;
 }
 
 const providersSliderOptions = {
   slidesPerView: "auto",
+  a11y: false,
   grid: {
     rows: 2,
     fill: "column",
@@ -25,6 +25,7 @@ const providersSliderOptions = {
 const vacancySliderOptions = {
   slidesPerView: 3,
   spaceBetween: 16,
+  a11y: false,
 
   pagination: {
     el: ".vacancy-slider .swiper-pagination",
