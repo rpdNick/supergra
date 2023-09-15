@@ -5,13 +5,13 @@ function initSlider(sliderElement, sliderOptions) {
 
 const providersSliderOptions = {
   slidesPerView: "auto",
+  spaceBetween: 20,
   a11y: false,
   grid: {
     rows: 2,
     fill: "column",
   },
-
-  spaceBetween: 20,
+  updateOnWindowResize: "true",
   pagination: {
     el: ".partners .swiper-pagination",
     clickable: true,
@@ -23,7 +23,7 @@ const providersSliderOptions = {
 };
 
 const vacancySliderOptions = {
-  slidesPerView: 3,
+  slidesPerView: "auto",
   spaceBetween: 16,
   a11y: false,
 

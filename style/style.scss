@@ -39,6 +39,11 @@ $gradient-hover: linear-gradient(135deg, #7024c4 0%, #60c 32.06%, #8e40dd 100%);
     line-height: 60px;
     color: $color-white;
     z-index: 1;
+
+    @media screen and (max-width: 1400px) {
+        font-size: 50px;
+        line-height: 50px;
+    }
 }
 
 .section_wrap {
@@ -439,19 +444,46 @@ a {
 
 .logo {
     display: inline-block;
-    margin-right: 20px;
 
     > img {
         max-width: 200px;
+
+        @media screen and (max-width: 1340px) {
+            max-width: 148px;
+        }
     }
 }
 
 .container {
     max-width: 1920px;
     margin: 0 auto;
+}
 
-    &.no_padding {
-        padding: 0;
+.responsive_wrapper {
+    @media screen and (max-width: 1450px) {
+        padding: 0 50px;
+    }
+
+    @media screen and (max-width: 512px) {
+        padding: 0 20px;
+    }
+
+    @media screen and (max-width: 379px) {
+        padding: 0 16px;
+    }
+}
+
+.responcive_slider {
+    @media screen and (max-width: 1450px) {
+        padding: 0 50px;
+    }
+
+    @media screen and (max-width: 512px) {
+        padding: 0 20px;
+    }
+
+    @media screen and (max-width: 379px) {
+        padding: 0 16px;
     }
 }
 
@@ -538,10 +570,6 @@ header {
                 flex-direction: row;
             }
 
-            &.vertical {
-                flex-direction: column;
-            }
-
             .menu_item {
                 position: relative;
                 font-size: 20px;
@@ -573,6 +601,19 @@ header {
                         opacity: 1;
                     }
                 }
+
+                @media screen and (max-width: 1440px) {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+
+            @media screen and (max-width: 1440px) {
+                margin: 0 40px;
+            }
+
+            @media screen and (max-width: 1282px) {
+                display: none;
             }
         }
 
@@ -624,12 +665,20 @@ section {
                 font-weight: 700;
                 line-height: 36px;
             }
+
+            @media screen and (max-width: 1450px) {
+                max-width: calc(50% - 20px);
+            }
         }
     }
 }
 
 .main_screen {
     padding: 134px 0;
+
+    @media screen and (max-width: 1600px) {
+        padding: 80px 0;
+    }
 
     .main_screen_box {
         padding: 120px 50px 150px 118px;
@@ -640,6 +689,12 @@ section {
             font-size: 100px;
             line-height: 92px;
             z-index: 3;
+
+            @media screen and (max-width: 1600px) {
+                max-width: 950px;
+                font-size: 85px;
+                line-height: 78px;
+            }
 
             // &.marked {
             //     padding-left: calc(127px / 2 - 25px);
@@ -674,6 +729,10 @@ section {
             height: 150px;
             bottom: calc(-150px / 2);
         }
+
+        @media screen and (max-width: 1600px) {
+            padding: 80px 50px;
+        }
     }
 
     .ms-left-line {
@@ -682,6 +741,10 @@ section {
         width: 100%;
         max-width: 741px;
         z-index: -1;
+
+        @media screen and (max-width: 1440px) {
+            width: 600px;
+        }
     }
 
     .ms-middle-line {
@@ -689,12 +752,24 @@ section {
         top: -280px;
         right: 130px;
         z-index: 2;
+
+        @media screen and (max-width: 1626px) {
+            right: 0;
+        }
+
+        @media screen and (max-width: 1440px) {
+            display: none;
+        }
     }
 
     .ms-right-line {
         right: -190px;
         top: 50px;
         z-index: 1;
+
+        @media screen and (max-width: 1440px) {
+            width: 700px;
+        }
     }
 }
 
@@ -769,6 +844,10 @@ section {
         left: calc(-800px / 2);
         top: 0;
     }
+
+    @media screen and (max-width: 1440px) {
+        padding: 60px 0;
+    }
 }
 
 .advantages {
@@ -777,6 +856,10 @@ section {
     .advantages_curve_line_left {
         top: -185px;
         left: -150px;
+
+        @media screen and (max-width: 1450px) {
+            top: -15px;
+        }
     }
 
     .advantages_curve_line_right {
@@ -880,7 +963,16 @@ section {
                 backdrop-filter: blur(20px);
 
                 > img {
+                    max-width: 120px;
                     object-fit: contain;
+                }
+
+                @media screen and (max-width: 647px) {
+                    padding: 23px;
+
+                    > img {
+                        max-width: 72px;
+                    }
                 }
             }
 
@@ -901,8 +993,40 @@ section {
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                     text-overflow: ellipsis;
+
+                    @media screen and (max-width: 647px) {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
                 }
             }
+
+            @media screen and (max-width: 1450px) {
+                width: calc(50% - 20px);
+                max-width: calc(25% - 20px);
+            }
+
+            @media screen and (max-width: 1225px) {
+                width: calc(33.3% - 20px);
+                max-width: calc(33.3% - 20px);
+            }
+
+            @media screen and (max-width: 931px) {
+                width: calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+
+            @media screen and (max-width: 647px) {
+                padding: 20px;
+                max-height: 216px;
+                min-height: 216px;
+                min-width: 160px;
+                border-radius: 24px;
+            }
+        }
+
+        @media screen and (max-width: 931px) {
+            gap: 8px;
         }
     }
 
@@ -953,6 +1077,7 @@ section {
 
     .transparent_box {
         padding: 110px 50px 110px 118px;
+        position: unset;
 
         .form_container {
             position: relative;
@@ -963,6 +1088,26 @@ section {
             .form_actions {
                 margin-top: 45px;
             }
+        }
+
+        .curve_line {
+            right: -34%;
+            top: -200px;
+
+            @media screen and (max-width: 1400px) {
+                top: 0;
+                right: -40%;
+                width: 900px;
+            }
+
+            @media screen and (max-width: 1090px) {
+                top: 40%;
+                right: -50%;
+            }
+        }
+
+        @media screen and (max-width: 1600px) {
+            padding: 80px 50px;
         }
     }
 
@@ -993,11 +1138,6 @@ section {
         filter: blur(200px);
         transform: rotate(180deg);
         z-index: -1;
-    }
-
-    .curve_line {
-        right: -200px;
-        top: -200px;
     }
 }
 
@@ -1161,5 +1301,17 @@ section {
                 }
             }
         }
+    }
+
+    @media screen and (max-width: 1450px) {
+        padding: 60px 50px;
+    }
+
+    @media screen and (max-width: 512px) {
+        padding: 60px 20px;
+    }
+
+    @media screen and (max-width: 379px) {
+        padding: 60px 16px;
     }
 }
