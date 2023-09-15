@@ -320,6 +320,12 @@ a {
                 line-height: 16px;
             }
 
+            &.phone_mask {
+                &::placeholder {
+                    color: #000;
+                }
+            }
+
             &.file_item {
                 position: relative;
                 display: flex;
@@ -948,8 +954,10 @@ section {
         padding: 110px 50px 110px 118px;
 
         .form_container {
+            position: relative;
             margin-top: 40px;
             max-width: 690px;
+            z-index: 3;
 
             .form_actions {
                 margin-top: 45px;

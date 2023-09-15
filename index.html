@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./style/swiper-bundle.min.css">
     <link rel="stylesheet" href="./font/Gilroy/stylesheet.css">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
 </head>
 
 <body>
@@ -555,30 +558,30 @@
                 <div class="transparent_box radius-90">
                     <div class="section_title txt_shadow">Зв'яжіться з нами</div>
                     <div class="form_container">
-                        <form id="contact_form" method="" action="">
+                        <form id="main_contact_form" method="" action="">
                             <div class="form_grid">
                                 <div class="form_item">
-                                    <label class="form_item_label" for="">Full name</label>
-                                    <input class="form_control" type="text" placeholder="Enter your name">
+                                    <label class="form_item_label" for="main_contact_name">Full name</label>
+                                    <input class="form_control" id="main_contact_name" type="text" placeholder="Enter your name">
                                 </div>
                                 <div class="form_item">
-                                    <label class="form_item_label" for="">Email</label>
-                                    <input class="form_control" type="text" placeholder="Enter your email">
+                                    <label class="form_item_label" for="main_contact_email">Email</label>
+                                    <input class="form_control" id="main_contact_email" type="text" placeholder="Enter your email">
                                 </div>
                                 <div class="form_item">
-                                    <label for="phone_number" class="form_item_label">Phone number</label>
-                                    <input class="form_control" size="40" class="phone" id="phone_number"
-                                        aria-required="true" aria-invalid="false" placeholder="&nbsp;" value=""
-                                        type="tel" name="tel-400" maxlength="13">
+                                    <label for="main_contact_phone" class="form_item_label">Phone number</label>
+                                    <input class="form_control phone_mask" size="40" class="phone" id="main_contact_phone"
+                                        aria-required="true" aria-invalid="false" placeholder="+3" type="tel"
+                                        name="tel-400" maxlength="13">
                                 </div>
                                 <div class="form_item">
-                                    <label class="form_item_label" for="">Telegram</label>
-                                    <input class="form_control" type="text" placeholder="Enter your telegram login">
+                                    <label class="form_item_label" for="main_contact_telegram">Telegram</label>
+                                    <input class="form_control" id="main_contact_telegram" type="text" placeholder="Enter your telegram login">
                                 </div>
                                 <div class="form_item">
-                                    <label class="form_item_label" for="">Завантажте CV</label>
+                                    <label class="form_item_label" for="main_contact_cv">Завантажте CV</label>
                                     <div class="form_control file_item">
-                                        <input type="file" name="file" size="40" id="file-cv"
+                                        <input type="file" name="file" size="40" id="main_contact_cv"
                                             accept=".doc,.docx,.txt,.pdf" aria-required="true">
                                         <span>Додати файл</span>
                                         <button class="button primary circular attach_file">
@@ -590,8 +593,8 @@
                             </div>
                             <div class="form_actions">
                                 <div class="checkbox_item">
-                                    <label class="checkbox_label" for="agreement">
-                                        <input class="agreement_input" type="checkbox" id="agreement" aria-required>
+                                    <label class="checkbox_label" for="main_contact_agreement">
+                                        <input class="agreement_input" type="checkbox" id="main_contact_agreement" aria-required>
                                         <i class="checkbox"></i>
                                         <span class="checkbox_txt">Я погоджуюсь на обробку моїх персональних
                                             даних</span>
@@ -640,9 +643,9 @@
             <i class="circle"></i>
         </footer>
     </main>
-
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/mask.js"></script>
 </body>
 
 </html>

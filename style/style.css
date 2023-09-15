@@ -260,6 +260,12 @@ a {
   font-weight: 400;
   line-height: 16px;
 }
+.form_container .form_item .form_control.phone_mask::-moz-placeholder {
+  color: #000;
+}
+.form_container .form_item .form_control.phone_mask::placeholder {
+  color: #000;
+}
 .form_container .form_item .form_control.file_item {
   position: relative;
   display: flex;
@@ -797,8 +803,10 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   padding: 110px 50px 110px 118px;
 }
 .contact_us .transparent_box .form_container {
+  position: relative;
   margin-top: 40px;
   max-width: 690px;
+  z-index: 3;
 }
 .contact_us .transparent_box .form_container .form_actions {
   margin-top: 45px;
