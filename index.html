@@ -20,17 +20,17 @@
                 <img src="./img/logo.svg" alt="logo">
             </a>
             <nav class="menu_main horizontal">
-                <a href="#" class="menu_item">Про нас</a>
-                <a href="#" class="menu_item">Переваги</a>
-                <a href="#" class="menu_item">Партнери</a>
-                <a href="#" class="menu_item">Цінності</a>
-                <a href="#" class="menu_item">Чому ми?</a>
-                <a href="#" class="menu_item">Вакансії</a>
-                <a href="#" class="menu_item">Контакти</a>
+                <div href="#about" class="menu_item scroll-to">Про нас</div>
+                <div href="#advantages" class="menu_item scroll-to">Переваги</div>
+                <div href="#partners" class="menu_item scroll-to">Партнери</div>
+                <div href="#valuables" class="menu_item scroll-to">Цінності</div>
+                <div href="#why_choose_us" class="menu_item scroll-to">Чому ми?</div>
+                <div href="#vacancy" class="menu_item scroll-to">Вакансії</div>
+                <div href="#footer" class="menu_item scroll-to">Контакти</div>
             </nav>
-            <a href="#" class="button primary">
+            <button href="#contact_us" class="button primary scroll-to">
                 <span class="ception">Зв'яжіться з нами</span>
-            </a>
+            </button>
         </div>
     </header>
     <main>
@@ -41,7 +41,7 @@
                 <div class="main_screen_box transparent_box radius-90">
                     <div class="section_title txt_shadow marked">Готові почати виграшну кар'єру?</div>
                     <div class="subtitle">Перегляньте наявні вакансії просто зараз!</div>
-                    <button class="button primary">
+                    <button href="#vacancy" class="button primary scroll-to">
                         <span class="ception">Вакансії</span>
                     </button>
                     <i class="circle"></i>
@@ -51,7 +51,7 @@
                 <img class="curve_line ms-right-line" src="./img/lines/curve-line3.png" alt="art-line">
             </div>
         </section>
-        <section class="about dark_bg">
+        <section class="about dark_bg" id="about">
             <div class="section_wrap">
                 <div class="flex_wrap">
                     <div class="description_box">
@@ -75,7 +75,7 @@
             </div>
             <div class="blur-circle blue"></div>
         </section>
-        <section class="advantages">
+        <section class="advantages" id="advantages">
             <div class="section_wrap">
                 <div class="section_title txt_shadow">
                     Переваги продукту SuperGra
@@ -124,7 +124,7 @@
             <i class="circle"></i>
             <div class="blur-circle gradient_pink_blue_bonuses"></div>
         </section>
-        <section class="partners">
+        <section class="partners" id="partners">
             <div class="section_wrap">
                 <div class="flex_wrap">
                     <div class="section_title txt_shadow">Партнери</div>
@@ -255,7 +255,7 @@
             </div>
             <div class="blur-circle blue"></div>
         </section>
-        <section class="valuables">
+        <section class="valuables" id="valuables">
             <div class="section_wrap">
                 <div class="section_title txt_shadow">Цінності</div>
                 <div class="valuables_wrap">
@@ -304,7 +304,7 @@
             </div>
             <div class="blur-circle gradient_pink_blue_bonuses"></div>
         </section>
-        <section class="why_choose_us dark_bg">
+        <section class="why_choose_us dark_bg" id="why_choose_us">
             <div class="section_wrap">
                 <div class="section_title txt_shadow">Чому ми?</div>
                 <div class="transparent_cards_wrap">
@@ -350,7 +350,7 @@
             <img class="curve_line curve_line_right" src="./img/lines/curve-line4.png" alt="art-line">
             <img class="curve_line curve_line_left" src="./img/lines/curve-line6.png" alt="art-line">
         </section>
-        <section class="vacancy">
+        <section class="vacancy" id="vacancy">
             <div class="section_wrap">
                 <div class="section_title txt_shadow">Вакансії</div>
                 <div class="slider_wrap swiper vacancy-slider">
@@ -553,7 +553,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact_us">
+        <section class="contact_us" id="contact_us">
             <div class="section_wrap">
                 <div class="transparent_box radius-90">
                     <div class="section_title txt_shadow">Зв'яжіться з нами</div>
@@ -612,7 +612,7 @@
             <img class="curve_line" src="./img/lines/curve-line7.png" alt="art-line">
             <div class="section-bg"></div>
         </section>
-        <footer class="footer dark_bg">
+        <footer class="footer dark_bg" id="footer">
             <div class="section_wrap">
                 <div class="section_title txt_shadow">Контакти</div>
                 <div class="footer_info">
@@ -636,7 +636,9 @@
                         </div>
                     </div>
                     <div class="footer_info_item">
-                        <img class="logo" src="./img/logo.svg" alt="logo">
+                        <a class="logo" href="#">
+                            <img src="./img/logo.svg" alt="logo">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -645,6 +647,7 @@
     </main>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/smoothScroll.js"></script>
     <script src="./js/mask.js"></script>
 </body>
 

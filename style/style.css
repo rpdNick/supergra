@@ -41,6 +41,7 @@ a {
 .button .icon {
   position: relative;
   color: inherit;
+  white-space: nowrap;
   z-index: 2;
 }
 .button.circular {
@@ -362,6 +363,22 @@ a {
   border-radius: 90px;
 }
 
+.logo {
+  display: inline-block;
+  margin-right: 20px;
+}
+.logo > img {
+  max-width: 200px;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container.no_padding {
+  padding: 0;
+}
+
 body {
   font-family: "Gilroy";
 }
@@ -382,7 +399,6 @@ body {
   background-image: url(../img/main-bg.webp);
   background-size: cover;
   background-position: center;
-  background-blend-mode: overlay;
   background-repeat: no-repeat;
 }
 
@@ -414,14 +430,6 @@ main .blur-circle.top-right {
   z-index: -1;
 }
 
-.container {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-.container.no_padding {
-  padding: 0;
-}
-
 header {
   position: fixed;
   top: 0;
@@ -438,13 +446,6 @@ header .main_header {
   padding: 0 60px;
   display: flex;
   align-items: center;
-}
-header .main_header .logo {
-  display: inline-block;
-  margin-right: 20px;
-}
-header .main_header .logo > img {
-  max-width: 200px;
 }
 header .main_header .menu_main {
   display: flex;
@@ -467,6 +468,7 @@ header .main_header .menu_main .menu_item {
   border-bottom: 2px solid transparent;
   border-radius: 2px;
   transition: 0.3s;
+  cursor: pointer;
 }
 header .main_header .menu_main .menu_item::before {
   content: "";
@@ -869,9 +871,6 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-}
-.footer .footer_info .footer_info_item .logo {
-  max-width: 200px;
 }
 .footer .circle {
   width: 130px;

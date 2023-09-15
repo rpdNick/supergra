@@ -69,6 +69,7 @@ a {
     .icon {
         position: relative;
         color: inherit;
+        white-space: nowrap;
         z-index: 2;
     }
 
@@ -436,6 +437,24 @@ a {
     border-radius: 90px;
 }
 
+.logo {
+    display: inline-block;
+    margin-right: 20px;
+
+    > img {
+        max-width: 200px;
+    }
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    &.no_padding {
+        padding: 0;
+    }
+}
+
 body {
     font-family: "Gilroy";
 
@@ -460,7 +479,6 @@ body {
     background-image: url(../img/main-bg.webp);
     background-size: cover;
     background-position: center;
-    background-blend-mode: overlay;
     background-repeat: no-repeat;
 }
 
@@ -495,15 +513,6 @@ main {
     }
 }
 
-.container {
-    max-width: 1920px;
-    margin: 0 auto;
-
-    &.no_padding {
-        padding: 0;
-    }
-}
-
 header {
     position: fixed;
     top: 0;
@@ -519,15 +528,6 @@ header {
         padding: 0 60px;
         display: flex;
         align-items: center;
-
-        .logo {
-            display: inline-block;
-            margin-right: 20px;
-
-            > img {
-                max-width: 200px;
-            }
-        }
 
         .menu_main {
             display: flex;
@@ -552,6 +552,7 @@ header {
                 border-bottom: 2px solid transparent;
                 border-radius: 2px;
                 transition: $transition;
+                cursor: pointer;
 
                 &::before {
                     content: "";
@@ -1034,10 +1035,6 @@ section {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 20px;
-            }
-
-            .logo {
-                max-width: 200px;
             }
         }
     }
