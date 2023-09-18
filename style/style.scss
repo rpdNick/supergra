@@ -25,6 +25,8 @@ $gradient_pink_blue_bonuses: linear-gradient(
     rgba(255, 16, 117, 0.8) 77.4%,
     rgba(255, 29, 219, 0.8) 100%
 );
+
+$gradient-blue: linear-gradient(135deg, #3e7bfa 0%, #60c 100%);
 $gradient-primary: linear-gradient(135deg, #ff3b3b 0%, #60c 100%);
 $gradient-secondary: linear-gradient(135deg, #73dfe7 0%, #0063f7 100%);
 $gradient-hover: linear-gradient(135deg, #7024c4 0%, #60c 32.06%, #8e40dd 100%);
@@ -112,6 +114,10 @@ a {
         background: $gradient-secondary;
     }
 
+    &.button_blue {
+        background: $gradient-blue;
+    }
+
     &:hover {
         &::before {
             opacity: 1;
@@ -145,6 +151,14 @@ a {
 
     &.icon-plus {
         background-image: url(../img/plus.svg);
+    }
+
+    &.icon-phone {
+        background-image: url(../img/phone.svg);
+    }
+
+    &.icon-menu {
+        background-image: url(../img/menu.svg);
     }
 }
 
@@ -282,6 +296,10 @@ a {
                 background: #ffffff;
             }
         }
+    }
+
+    @media screen and (max-width: 920px) {
+        display: none;
     }
 }
 
@@ -625,8 +643,39 @@ header {
             }
         }
 
-        .button {
+        .buttons_wrap {
             margin-left: auto;
+            display: flex;
+            gap: 12px;
+
+            .contact_btn {
+                .icon-phone {
+                    display: none;
+                }
+
+                @media screen and (max-width: 1282px) {
+                    min-width: 56px;
+                    min-height: 56px;
+                    border-radius: 50%;
+                    padding: 16px;
+
+                    .ception {
+                        display: none;
+                    }
+
+                    .icon-phone {
+                        display: block;
+                    }
+                }
+            }
+
+            .menu_button {
+                display: none;
+
+                @media screen and (max-width: 1282px) {
+                    display: flex;
+                }
+            }
         }
     }
 }
@@ -842,6 +891,10 @@ section {
                 bottom: 158px;
             }
         }
+
+        @media screen and (max-width: 920px) {
+            flex-direction: column;
+        }
     }
 
     .blur-circle {
@@ -891,6 +944,10 @@ section {
         right: calc(-853px / 4);
         top: 50%;
         transform: translateY(-10%);
+    }
+
+    @media screen and (max-width: 920px) {
+        padding: 98px 0;
     }
 }
 
@@ -1073,6 +1130,10 @@ section {
         width: 800px;
         right: -150px;
         top: 150px;
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
     }
 }
 

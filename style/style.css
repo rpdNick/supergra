@@ -80,6 +80,9 @@ a {
 .button.secondary {
   background: linear-gradient(135deg, #73dfe7 0%, #0063f7 100%);
 }
+.button.button_blue {
+  background: linear-gradient(135deg, #3e7bfa 0%, #60c 100%);
+}
 .button:hover::before {
   opacity: 1;
   background: linear-gradient(135deg, #7024c4 0%, #60c 32.06%, #8e40dd 100%);
@@ -108,6 +111,12 @@ a {
 }
 .icon.icon-plus {
   background-image: url(../img/plus.svg);
+}
+.icon.icon-phone {
+  background-image: url(../img/phone.svg);
+}
+.icon.icon-menu {
+  background-image: url(../img/menu.svg);
 }
 
 .blur-circle {
@@ -220,6 +229,11 @@ a {
 }
 .slider-control .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #ffffff;
+}
+@media screen and (max-width: 920px) {
+  .slider-control {
+    display: none;
+  }
 }
 
 .form_container .form_grid {
@@ -544,8 +558,35 @@ header .main_header .menu_main .menu_item:hover::before {
     display: none;
   }
 }
-header .main_header .button {
+header .main_header .buttons_wrap {
   margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+header .main_header .buttons_wrap .contact_btn .icon-phone {
+  display: none;
+}
+@media screen and (max-width: 1282px) {
+  header .main_header .buttons_wrap .contact_btn {
+    min-width: 56px;
+    min-height: 56px;
+    border-radius: 50%;
+    padding: 16px;
+  }
+  header .main_header .buttons_wrap .contact_btn .ception {
+    display: none;
+  }
+  header .main_header .buttons_wrap .contact_btn .icon-phone {
+    display: block;
+  }
+}
+header .main_header .buttons_wrap .menu_button {
+  display: none;
+}
+@media screen and (max-width: 1282px) {
+  header .main_header .buttons_wrap .menu_button {
+    display: flex;
+  }
 }
 
 section {
@@ -732,6 +773,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   right: -75px;
   bottom: 158px;
 }
+@media screen and (max-width: 920px) {
+  .about .flex_wrap {
+    flex-direction: column;
+  }
+}
 .about .blur-circle {
   width: 800px;
   height: 800px;
@@ -777,6 +823,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   right: -213.25px;
   top: 50%;
   transform: translateY(-10%);
+}
+@media screen and (max-width: 920px) {
+  .advantages {
+    padding: 98px 0;
+  }
 }
 
 .partners {
@@ -948,6 +999,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   width: 800px;
   right: -150px;
   top: 150px;
+}
+@media screen and (max-width: 1000px) {
+  .why_choose_us .curve_line_right {
+    display: none;
+  }
 }
 
 .vacancy {
