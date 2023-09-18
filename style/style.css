@@ -249,6 +249,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
+  max-width: 335px;
   color: #000;
   outline: none;
   -webkit-appearance: none;
@@ -288,19 +289,23 @@ a {
   position: absolute;
   right: 4px;
 }
-.form_container .form_item .form_control.file_item > span {
+.form_container .form_item .form_control.file_item .attach_file.active .icon-plus {
+  transform: rotate(45deg);
+}
+.form_container .form_item .form_control.file_item > .file_label {
   color: #666;
+  padding-right: 40px;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .form_container .form_item input[type=file] {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  display: none;
   opacity: 0;
 }
 .form_container .form_item .file_hint {
