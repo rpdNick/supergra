@@ -1166,7 +1166,16 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: 0.3s;
   text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+}
+.vacancy-slider .swiper-slide .vacancy_card .card_header .vacancy_name:hover > span {
+  text-decoration-color: #fff;
+  -webkit-text-decoration-color: #fff;
+  -moz-text-decoration-color: #fff;
 }
 .vacancy-slider .swiper-slide .vacancy_card .card_header .icon-hot {
   width: 58px;

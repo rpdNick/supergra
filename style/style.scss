@@ -1080,7 +1080,7 @@ section {
 
     .blur-circle {
         top: 0;
-        right: (-853px / 4);
+        right: calc(-853px / 4);
         width: 853px;
         height: 853px;
         transform: rotate(90deg);
@@ -1310,7 +1310,19 @@ section {
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                        transition: $transition;
                         text-decoration: underline;
+                        text-decoration-color: transparent;
+                        -webkit-text-decoration-color: transparent;
+                        -moz-text-decoration-color: transparent;
+                    }
+                }
+
+                .vacancy_name:hover {
+                    > span {
+                        text-decoration-color: $color-white;
+                        -webkit-text-decoration-color: $color-white;
+                        -moz-text-decoration-color: $color-white;
                     }
                 }
 
