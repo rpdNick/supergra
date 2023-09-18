@@ -1160,10 +1160,14 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   align-items: center;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  min-height: 79px;
 }
 .vacancy-slider .swiper-slide .vacancy_card .card_header .vacancy_name {
+  display: flex;
+  align-items: center;
   color: #fff;
+  min-height: 72px;
+}
+.vacancy-slider .swiper-slide .vacancy_card .card_header .vacancy_name > span {
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -1174,6 +1178,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: underline;
 }
 .vacancy-slider .swiper-slide .vacancy_card .card_header .icon-hot {
   width: 58px;
