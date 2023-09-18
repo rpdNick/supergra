@@ -46,6 +46,11 @@ $gradient-hover: linear-gradient(135deg, #7024c4 0%, #60c 32.06%, #8e40dd 100%);
         font-size: 50px;
         line-height: 50px;
     }
+
+    @media screen and (max-width: 920px) {
+        font-size: 40px;
+        line-height: 40px;
+    }
 }
 
 .section_wrap {
@@ -490,7 +495,7 @@ a {
         padding: 0 50px;
     }
 
-    @media screen and (max-width: 512px) {
+    @media screen and (max-width: 850px) {
         padding: 0 20px;
     }
 
@@ -504,7 +509,7 @@ a {
         padding: 0 50px;
     }
 
-    @media screen and (max-width: 512px) {
+    @media screen and (max-width: 850px) {
         padding: 0 20px;
     }
 
@@ -567,6 +572,15 @@ main {
             border-radius: 953px;
             filter: blur(200px);
             z-index: -1;
+
+            @media screen and (max-width: 620px) {
+                width: 253px;
+                height: 253px;
+                right: calc(-253px / 2);
+                top: 100px;
+                border-radius: 50%;
+                filter: blur(50px);
+            }
         }
     }
 }
@@ -695,6 +709,13 @@ section {
                     display: block;
                     margin: 0 auto;
                     object-fit: contain;
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 920px) {
+                    min-width: 60px;
+                    max-width: 60px;
+                    height: 60px;
                 }
             }
 
@@ -704,11 +725,25 @@ section {
                 font-style: normal;
                 font-weight: 700;
                 line-height: 36px;
+
+                @media screen and (max-width: 920px) {
+                    font-size: 25px;
+                    line-height: 28px;
+                }
             }
 
             @media screen and (max-width: 1450px) {
                 max-width: calc(50% - 20px);
             }
+
+            @media screen and (max-width: 920px) {
+                min-width: 160px;
+                max-height: 140px;
+            }
+        }
+
+        @media screen and (max-width: 1450px) {
+            margin-top: 32px;
         }
     }
 }
@@ -736,6 +771,17 @@ section {
                 line-height: 78px;
             }
 
+            @media screen and (max-width: 920px) {
+                font-size: 65px;
+                line-height: 58px;
+            }
+
+            @media screen and (max-width: 620px) {
+                font-size: 40px;
+                line-height: 45px;
+                max-width: 450px;
+            }
+
             // &.marked {
             //     padding-left: calc(127px / 2 - 25px);
 
@@ -756,22 +802,50 @@ section {
             font-weight: 500;
             line-height: 36px;
             z-index: 3;
+
+            @media screen and (max-width: 920px) {
+                font-size: 22px;
+                line-height: 26px;
+            }
+
+            @media screen and (max-width: 620px) {
+                font-size: 16px;
+                line-height: 20px;
+                margin: 32px 0 16px 0;
+            }
         }
 
         .button {
             position: relative;
             min-width: 222px;
             z-index: 3;
+
+            @media screen and (max-width: 620px) {
+                min-width: 200px;
+            }
         }
 
         .circle {
             width: 150px;
             height: 150px;
             bottom: calc(-150px / 2);
+
+            @media screen and (max-width: 920px) {
+                width: 100px;
+                height: 100px;
+                bottom: calc(-100px / 2);
+                right: 100px;
+            }
         }
 
         @media screen and (max-width: 1600px) {
             padding: 80px 50px;
+        }
+
+        @media screen and (max-width: 620px) {
+            padding: 32px 24px;
+            border-radius: 50px;
+            backdrop-filter: blur(4px);
         }
     }
 
@@ -784,6 +858,12 @@ section {
 
         @media screen and (max-width: 1440px) {
             width: 600px;
+        }
+
+        @media screen and (max-width: 620px) {
+            width: 350px;
+            bottom: 40px;
+            left: -100px;
         }
     }
 
@@ -809,6 +889,12 @@ section {
 
         @media screen and (max-width: 1440px) {
             width: 700px;
+        }
+
+        @media screen and (max-width: 620px) {
+            width: 350px;
+            top: -20px;
+            right: -50px;
         }
     }
 }
@@ -865,6 +951,10 @@ section {
             .avarat_img {
                 max-width: 272px;
                 width: 100%;
+
+                @media screen and (max-width: 920px) {
+                    max-width: 172px;
+                }
             }
 
             .circle {
@@ -872,11 +962,22 @@ section {
                 height: 150px;
                 right: calc(-150px / 2);
                 bottom: 158px;
+
+                @media screen and (max-width: 920px) {
+                    width: 100px;
+                    height: 100px;
+                    right: calc(-100px / 2);
+                }
+            }
+
+            @media screen and (max-width: 920px) {
+                border-radius: 100px;
             }
         }
 
         @media screen and (max-width: 920px) {
             flex-direction: column;
+            gap: 30px;
         }
     }
 
@@ -887,6 +988,12 @@ section {
         filter: blur(200px);
         left: calc(-800px / 2);
         top: 0;
+
+        @media screen and (max-width: 920px) {
+            width: 500px;
+            height: 500px;
+            left: calc(-500px / 2);
+        }
     }
 
     @media screen and (max-width: 1440px) {
@@ -917,6 +1024,10 @@ section {
         height: 150px;
         transform: translateY(-50%);
         left: calc(-150px / 2);
+
+        @media screen and (max-width: 920px) {
+            display: none;
+        }
     }
 
     .blur-circle {
@@ -1015,7 +1126,7 @@ section {
                     object-fit: contain;
                 }
 
-                @media screen and (max-width: 647px) {
+                @media screen and (max-width: 920px) {
                     padding: 23px;
 
                     > img {
@@ -1042,7 +1153,7 @@ section {
                     overflow: hidden;
                     text-overflow: ellipsis;
 
-                    @media screen and (max-width: 647px) {
+                    @media screen and (max-width: 920px) {
                         font-size: 20px;
                         line-height: 28px;
                     }
@@ -1059,22 +1170,18 @@ section {
                 max-width: calc(33.3% - 20px);
             }
 
-            @media screen and (max-width: 931px) {
-                width: calc(50% - 20px);
-                max-width: calc(50% - 20px);
-            }
+            // @media screen and (max-width: 931px) {
+            //     width: calc(50% - 20px);
+            //     max-width: calc(50% - 20px);
+            // }
 
-            @media screen and (max-width: 647px) {
+            @media screen and (max-width: 920px) {
                 padding: 20px;
                 max-height: 216px;
                 min-height: 216px;
                 min-width: 160px;
                 border-radius: 24px;
             }
-        }
-
-        @media screen and (max-width: 931px) {
-            gap: 8px;
         }
     }
 
@@ -1101,12 +1208,22 @@ section {
         transform: rotate(-90deg);
         flex-shrink: 0;
         filter: blur(200px);
+
+        @media screen and (max-width: 920px) {
+            width: 500px;
+        }
     }
 
     .curve_line_left {
         max-width: 1000px;
         left: calc(-800px / 2);
         top: -300px;
+
+        @media screen and (max-width: 920px) {
+            max-width: 580px;
+            left: calc(-580px / 2);
+            top: 0;
+        }
     }
 
     .curve_line_right {
@@ -1117,6 +1234,10 @@ section {
         @media screen and (max-width: 1000px) {
             display: none;
         }
+    }
+
+    @media screen and (max-width: 920px) {
+        padding: 50px 0;
     }
 }
 
@@ -1155,6 +1276,10 @@ section {
             @media screen and (max-width: 1090px) {
                 top: 40%;
                 right: -50%;
+            }
+
+            @media screen and (max-width: 1090px) {
+                width: 600px;
             }
         }
 

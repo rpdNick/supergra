@@ -20,6 +20,12 @@
     line-height: 50px;
   }
 }
+@media screen and (max-width: 920px) {
+  .section_title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
 
 .section_wrap {
   max-width: 1400px;
@@ -410,7 +416,7 @@ a {
     padding: 0 50px;
   }
 }
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 850px) {
   .responsive_wrapper {
     padding: 0 20px;
   }
@@ -426,7 +432,7 @@ a {
     padding: 0 50px;
   }
 }
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 850px) {
   .responcive_slider {
     padding: 0 20px;
   }
@@ -486,6 +492,16 @@ main .blur-circle.top-right {
   border-radius: 953px;
   filter: blur(200px);
   z-index: -1;
+}
+@media screen and (max-width: 620px) {
+  main .blur-circle.top-right {
+    width: 253px;
+    height: 253px;
+    right: -126.5px;
+    top: 100px;
+    border-radius: 50%;
+    filter: blur(50px);
+  }
 }
 
 header {
@@ -610,6 +626,14 @@ section .transparent_cards_wrap .transparent_cards_item .image_holder > img {
   margin: 0 auto;
   -o-object-fit: contain;
      object-fit: contain;
+  width: 100%;
+}
+@media screen and (max-width: 920px) {
+  section .transparent_cards_wrap .transparent_cards_item .image_holder {
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
+  }
 }
 section .transparent_cards_wrap .transparent_cards_item .description {
   color: #fff;
@@ -618,9 +642,26 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   font-weight: 700;
   line-height: 36px;
 }
+@media screen and (max-width: 920px) {
+  section .transparent_cards_wrap .transparent_cards_item .description {
+    font-size: 25px;
+    line-height: 28px;
+  }
+}
 @media screen and (max-width: 1450px) {
   section .transparent_cards_wrap .transparent_cards_item {
     max-width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 920px) {
+  section .transparent_cards_wrap .transparent_cards_item {
+    min-width: 160px;
+    max-height: 140px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  section .transparent_cards_wrap {
+    margin-top: 32px;
   }
 }
 
@@ -649,6 +690,19 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     line-height: 78px;
   }
 }
+@media screen and (max-width: 920px) {
+  .main_screen .main_screen_box .section_title {
+    font-size: 65px;
+    line-height: 58px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .main_screen .main_screen_box .section_title {
+    font-size: 40px;
+    line-height: 45px;
+    max-width: 450px;
+  }
+}
 .main_screen .main_screen_box .subtitle {
   position: relative;
   margin: 40px 0;
@@ -659,19 +713,53 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   line-height: 36px;
   z-index: 3;
 }
+@media screen and (max-width: 920px) {
+  .main_screen .main_screen_box .subtitle {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .main_screen .main_screen_box .subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 32px 0 16px 0;
+  }
+}
 .main_screen .main_screen_box .button {
   position: relative;
   min-width: 222px;
   z-index: 3;
+}
+@media screen and (max-width: 620px) {
+  .main_screen .main_screen_box .button {
+    min-width: 200px;
+  }
 }
 .main_screen .main_screen_box .circle {
   width: 150px;
   height: 150px;
   bottom: -75px;
 }
+@media screen and (max-width: 920px) {
+  .main_screen .main_screen_box .circle {
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    right: 100px;
+  }
+}
 @media screen and (max-width: 1600px) {
   .main_screen .main_screen_box {
     padding: 80px 50px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .main_screen .main_screen_box {
+    padding: 32px 24px;
+    border-radius: 50px;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
   }
 }
 .main_screen .ms-left-line {
@@ -684,6 +772,13 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 @media screen and (max-width: 1440px) {
   .main_screen .ms-left-line {
     width: 600px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .main_screen .ms-left-line {
+    width: 350px;
+    bottom: 40px;
+    left: -100px;
   }
 }
 .main_screen .ms-middle-line {
@@ -710,6 +805,13 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 @media screen and (max-width: 1440px) {
   .main_screen .ms-right-line {
     width: 700px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .main_screen .ms-right-line {
+    width: 350px;
+    top: -20px;
+    right: -50px;
   }
 }
 
@@ -755,6 +857,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   max-width: 272px;
   width: 100%;
 }
+@media screen and (max-width: 920px) {
+  .about .flex_wrap .avatar_box .avarat_img {
+    max-width: 172px;
+  }
+}
 .about .flex_wrap .avatar_box .circle {
   width: 150px;
   height: 150px;
@@ -762,8 +869,21 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   bottom: 158px;
 }
 @media screen and (max-width: 920px) {
+  .about .flex_wrap .avatar_box .circle {
+    width: 100px;
+    height: 100px;
+    right: -50px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .about .flex_wrap .avatar_box {
+    border-radius: 100px;
+  }
+}
+@media screen and (max-width: 920px) {
   .about .flex_wrap {
     flex-direction: column;
+    gap: 30px;
   }
 }
 .about .blur-circle {
@@ -773,6 +893,13 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   filter: blur(200px);
   left: -400px;
   top: 0;
+}
+@media screen and (max-width: 920px) {
+  .about .blur-circle {
+    width: 500px;
+    height: 500px;
+    left: -250px;
+  }
 }
 @media screen and (max-width: 1440px) {
   .about {
@@ -802,6 +929,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   height: 150px;
   transform: translateY(-50%);
   left: -75px;
+}
+@media screen and (max-width: 920px) {
+  .advantages .circle {
+    display: none;
+  }
 }
 .advantages .blur-circle {
   width: 953px;
@@ -891,7 +1023,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media screen and (max-width: 647px) {
+@media screen and (max-width: 920px) {
   .valuables .valuables_wrap .card_item .image_holder {
     padding: 23px;
   }
@@ -917,7 +1049,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media screen and (max-width: 647px) {
+@media screen and (max-width: 920px) {
   .valuables .valuables_wrap .card_item .caption span {
     font-size: 20px;
     line-height: 28px;
@@ -935,24 +1067,13 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     max-width: calc(33.3% - 20px);
   }
 }
-@media screen and (max-width: 931px) {
-  .valuables .valuables_wrap .card_item {
-    width: calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-}
-@media screen and (max-width: 647px) {
+@media screen and (max-width: 920px) {
   .valuables .valuables_wrap .card_item {
     padding: 20px;
     max-height: 216px;
     min-height: 216px;
     min-width: 160px;
     border-radius: 24px;
-  }
-}
-@media screen and (max-width: 931px) {
-  .valuables .valuables_wrap {
-    gap: 8px;
   }
 }
 .valuables .blur-circle {
@@ -978,10 +1099,22 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   flex-shrink: 0;
   filter: blur(200px);
 }
+@media screen and (max-width: 920px) {
+  .why_choose_us .blur-circle {
+    width: 500px;
+  }
+}
 .why_choose_us .curve_line_left {
   max-width: 1000px;
   left: -400px;
   top: -300px;
+}
+@media screen and (max-width: 920px) {
+  .why_choose_us .curve_line_left {
+    max-width: 580px;
+    left: -290px;
+    top: 0;
+  }
 }
 .why_choose_us .curve_line_right {
   width: 800px;
@@ -991,6 +1124,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 @media screen and (max-width: 1000px) {
   .why_choose_us .curve_line_right {
     display: none;
+  }
+}
+@media screen and (max-width: 920px) {
+  .why_choose_us {
+    padding: 50px 0;
   }
 }
 
@@ -1029,6 +1167,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   .contact_us .transparent_box .curve_line {
     top: 40%;
     right: -50%;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .contact_us .transparent_box .curve_line {
+    width: 600px;
   }
 }
 @media screen and (max-width: 1600px) {
