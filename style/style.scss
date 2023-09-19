@@ -51,6 +51,11 @@ $gradient-hover: linear-gradient(135deg, #7024c4 0%, #60c 32.06%, #8e40dd 100%);
         font-size: 40px;
         line-height: 40px;
     }
+
+    @media screen and (max-width: 520px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 .section_wrap {
@@ -673,6 +678,14 @@ header {
             @media screen and (max-width: 1287px) {
                 display: flex;
             }
+
+            .button {
+                @media screen and (max-width: 520px) {
+                    min-width: 40px;
+                    min-height: 40px;
+                    padding: 8px;
+                }
+            }
         }
 
         @media screen and (max-width: 1450px) {
@@ -750,7 +763,7 @@ section {
             }
 
             @media screen and (max-width: 1450px) {
-                max-width: calc(50% - 20px);
+                max-width: calc(50% - 10px);
             }
 
             @media screen and (max-width: 920px) {
@@ -761,11 +774,21 @@ section {
             @media screen and (max-width: 775px) {
                 padding: 30px 20px;
                 border-radius: 30px;
+                max-width: calc(50% - 10px);
+                width: 100%;
+            }
+
+            @media screen and (max-width: 520px) {
+                max-width: calc(50% - 4px);
             }
         }
 
         @media screen and (max-width: 1450px) {
             margin-top: 32px;
+        }
+
+        @media screen and (max-width: 520px) {
+            gap: 8px;
         }
     }
 }
@@ -802,6 +825,15 @@ section {
                 font-size: 40px;
                 line-height: 45px;
                 max-width: 450px;
+            }
+
+            @media screen and (max-width: 520px) {
+                font-size: 28px;
+                line-height: 32px;
+            }
+
+            @media screen and (max-width: 370px) {
+                max-width: 250px;
             }
 
             // &.marked {
@@ -858,6 +890,13 @@ section {
                 bottom: calc(-100px / 2);
                 right: 100px;
             }
+
+            @media screen and (max-width: 520px) {
+                width: 60px;
+                height: 60px;
+                bottom: calc(-60px / 2);
+                right: 32px;
+            }
         }
 
         @media screen and (max-width: 1600px) {
@@ -885,6 +924,12 @@ section {
         @media screen and (max-width: 620px) {
             width: 350px;
             bottom: 40px;
+            left: -100px;
+        }
+
+        @media screen and (max-width: 520px) {
+            width: 300px;
+            bottom: 120px;
             left: -100px;
         }
     }
@@ -956,6 +1001,11 @@ section {
                 &:last-child {
                     margin-bottom: 0;
                 }
+
+                @media screen and (max-width: 520px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
             }
         }
 
@@ -987,10 +1037,6 @@ section {
                 @media screen and (max-width: 920px) {
                     max-width: 172px;
                 }
-
-                // @media screen and (max-width: 920px) {
-                //     max-width: 95px;
-                // }
             }
 
             .circle {
@@ -1085,6 +1131,10 @@ section {
         @media screen and (max-width: 1450px) {
             top: -15px;
         }
+
+        @media screen and (max-width: 1450px) {
+            width: 335px;
+        }
     }
 
     .advantages_curve_line_right {
@@ -1148,6 +1198,10 @@ section {
         flex-shrink: 0;
         filter: blur(200px);
         z-index: -1;
+    }
+
+    @media screen and (max-width: 520px) {
+        padding-bottom: 20px;
     }
 }
 
@@ -1249,11 +1303,6 @@ section {
                 max-width: calc(33.3% - 20px);
             }
 
-            // @media screen and (max-width: 931px) {
-            //     width: calc(50% - 20px);
-            //     max-width: calc(50% - 20px);
-            // }
-
             @media screen and (max-width: 920px) {
                 padding: 20px;
                 max-height: 216px;
@@ -1261,6 +1310,10 @@ section {
                 min-width: 160px;
                 border-radius: 24px;
             }
+        }
+
+        @media screen and (max-width: 371px) {
+           gap: 8px;
         }
     }
 
@@ -1274,6 +1327,10 @@ section {
         filter: blur(300px);
         z-index: -1;
     }
+
+    @media screen and (max-width: 520px) {
+        padding-bottom: 60px;
+     }
 }
 
 .why_choose_us {
@@ -1456,11 +1513,21 @@ section {
     .swiper-wrapper {
         max-height: 260px;
 
+        @media screen and (max-width: 520px) {
+            max-height: 184px;
+        }
+
         .swiper-slide {
             position: relative;
             min-width: 216px;
             max-width: 216px;
             height: calc((100% - 20px) / 2) !important;
+
+            @media screen and (max-width: 520px) {
+                min-width: 160px;
+                max-width: 160px;
+                height: calc((100% - 8px) / 2) !important;
+            }
 
             .item_provider_game {
                 display: flex;
@@ -1476,6 +1543,10 @@ section {
 
                 .provider_image {
                     max-width: 140px;
+
+                    @media screen and (max-width: 520px) {
+                        max-width: 100px;
+                    }
                 }
 
                 &:hover {
@@ -1488,6 +1559,12 @@ section {
                         0px 9px 14px -5px #fff inset,
                         0px 48px 70px -45px rgba(255, 255, 255, 0.5) inset;
                     border-color: transparent;
+                }
+
+                @media screen and (max-width: 520px) {
+                    width: 160px;
+                    height: 88px;
+                    padding: 19px 30px;
                 }
             }
         }

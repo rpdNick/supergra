@@ -4,12 +4,28 @@ function initSlider(sliderElement, sliderOptions) {
 }
 
 const providersSliderOptions = {
-  slidesPerView: "auto",
-  spaceBetween: 20,
-  a11y: false,
-  grid: {
-    rows: 2,
-    fill: "column",
+  breakpoints: {
+    320: {
+      grid: {
+        rows: 2,
+        fill: "column",
+      },
+
+      a11y: false,
+      slidesPerView: "auto",
+      spaceBetween: 8,
+    },
+
+    520: {
+      grid: {
+        rows: 2,
+        fill: "column",
+      },
+
+      a11y: false,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+    },
   },
   updateOnWindowResize: "true",
   pagination: {
@@ -26,6 +42,7 @@ const vacancySliderOptions = {
   slidesPerView: "auto",
   spaceBetween: 16,
   a11y: false,
+  updateOnWindowResize: "true",
 
   pagination: {
     el: ".vacancy-slider .swiper-pagination",
