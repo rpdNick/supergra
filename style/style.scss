@@ -72,7 +72,7 @@ a {
     outline: none;
     border: none;
     cursor: pointer;
-    transition: all $transition ease-in-out;
+    transition: $transition ease-in-out;
     box-shadow:
         0px 2px 4px 0px rgba(0, 0, 0, 0.32),
         0px 0px 1px 0px rgba(0, 0, 0, 0.04);
@@ -103,7 +103,7 @@ a {
         bottom: 0;
         left: -1px;
         display: block;
-        background: unset;
+        background: transparent;
         border-radius: inherit;
         transition: inherit;
         opacity: 0;
@@ -912,38 +912,44 @@ section {
 .about {
     padding: 60px;
 
-    .flex_wrap {
-        display: flex;
+    .grid_wrap {
+        display: grid;
+        grid-template-areas:
+            "title avatar"
+            "description avatar";
         align-items: center;
-        gap: 20px;
+        gap: 48px 20px;
         position: relative;
         z-index: 2;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: max-content max-content;
 
-        .description_box {
-            .title {
-                position: relative;
-            }
+        .section_title {
+            grid-area: title;
+            align-self: end;
+        }
 
-            .description {
-                max-width: 808px;
-                margin-top: 48px;
+        .description {
+            grid-area: description;
+            max-width: 808px;
+            align-self: baseline;
 
-                .description_row {
-                    color: #ffffffcc;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 28px;
-                    margin-bottom: 30px;
+            .description_row {
+                color: #ffffffcc;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 28px;
+                margin-bottom: 30px;
 
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
+                &:last-child {
+                    margin-bottom: 0;
                 }
             }
         }
 
         .avatar_box {
+            grid-area: avatar;
             position: relative;
             padding: 89px 150px;
             border-radius: 150px;

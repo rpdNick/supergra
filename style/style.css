@@ -46,7 +46,7 @@ a {
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.32), 0px 0px 1px 0px rgba(0, 0, 0, 0.04);
 }
 .button .ception,
@@ -73,7 +73,7 @@ a {
   bottom: 0;
   left: -1px;
   display: block;
-  background: unset;
+  background: transparent;
   border-radius: inherit;
   transition: inherit;
   opacity: 0;
@@ -830,21 +830,26 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 .about {
   padding: 60px;
 }
-.about .flex_wrap {
-  display: flex;
+.about .grid_wrap {
+  display: grid;
+  grid-template-areas: "title avatar" "description avatar";
   align-items: center;
-  gap: 20px;
+  gap: 48px 20px;
   position: relative;
   z-index: 2;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: max-content max-content;
 }
-.about .flex_wrap .description_box .title {
-  position: relative;
+.about .grid_wrap .section_title {
+  grid-area: title;
+  align-self: end;
 }
-.about .flex_wrap .description_box .description {
+.about .grid_wrap .description {
+  grid-area: description;
   max-width: 808px;
-  margin-top: 48px;
+  align-self: baseline;
 }
-.about .flex_wrap .description_box .description .description_row {
+.about .grid_wrap .description .description_row {
   color: rgba(255, 255, 255, 0.8);
   font-size: 24px;
   font-style: normal;
@@ -852,10 +857,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   line-height: 28px;
   margin-bottom: 30px;
 }
-.about .flex_wrap .description_box .description .description_row:last-child {
+.about .grid_wrap .description .description_row:last-child {
   margin-bottom: 0;
 }
-.about .flex_wrap .avatar_box {
+.about .grid_wrap .avatar_box {
+  grid-area: avatar;
   position: relative;
   padding: 89px 150px;
   border-radius: 150px;
@@ -865,35 +871,35 @@ section .transparent_cards_wrap .transparent_cards_item .description {
           backdrop-filter: blur(56px);
   z-index: 2;
 }
-.about .flex_wrap .avatar_box .avarat_img {
+.about .grid_wrap .avatar_box .avarat_img {
   max-width: 272px;
   width: 100%;
 }
 @media screen and (max-width: 920px) {
-  .about .flex_wrap .avatar_box .avarat_img {
+  .about .grid_wrap .avatar_box .avarat_img {
     max-width: 172px;
   }
 }
-.about .flex_wrap .avatar_box .circle {
+.about .grid_wrap .avatar_box .circle {
   width: 150px;
   height: 150px;
   right: -75px;
   bottom: 158px;
 }
 @media screen and (max-width: 920px) {
-  .about .flex_wrap .avatar_box .circle {
+  .about .grid_wrap .avatar_box .circle {
     width: 100px;
     height: 100px;
     right: -50px;
   }
 }
 @media screen and (max-width: 920px) {
-  .about .flex_wrap .avatar_box {
+  .about .grid_wrap .avatar_box {
     border-radius: 100px;
   }
 }
 @media screen and (max-width: 920px) {
-  .about .flex_wrap {
+  .about .grid_wrap {
     flex-direction: column;
     gap: 30px;
   }
