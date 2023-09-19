@@ -14,6 +14,20 @@
   color: #fff;
   z-index: 1;
 }
+.section_title.mobile_title {
+  display: none;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 520px) {
+  .section_title.mobile_title {
+    display: block;
+  }
+}
+@media screen and (max-width: 520px) {
+  .section_title.pc_title {
+    display: none;
+  }
+}
 @media screen and (max-width: 1400px) {
   .section_title {
     font-size: 50px;
@@ -253,6 +267,11 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px 20px;
 }
+@media screen and (max-width: 650px) {
+  .form_container .form_grid {
+    grid-template-columns: 1fr;
+  }
+}
 .form_container .form_item {
   position: relative;
   display: flex;
@@ -328,6 +347,11 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media screen and (max-width: 650px) {
+  .form_container .form_item .form_control {
+    max-width: 100%;
+  }
 }
 .form_container .form_item input[type=file] {
   position: absolute;
@@ -663,6 +687,13 @@ section .transparent_cards_wrap .transparent_cards_item .image_holder > img {
     height: 60px;
   }
 }
+@media screen and (max-width: 520px) {
+  section .transparent_cards_wrap .transparent_cards_item .image_holder {
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+  }
+}
 section .transparent_cards_wrap .transparent_cards_item .description {
   color: #fff;
   font-size: 32px;
@@ -682,6 +713,12 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     line-height: 21px;
   }
 }
+@media screen and (max-width: 450px) {
+  section .transparent_cards_wrap .transparent_cards_item .description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 @media screen and (max-width: 1450px) {
   section .transparent_cards_wrap .transparent_cards_item {
     max-width: calc(50% - 10px);
@@ -698,12 +735,16 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     padding: 30px 20px;
     border-radius: 30px;
     max-width: calc(50% - 10px);
+    min-height: 123px;
     width: 100%;
   }
 }
 @media screen and (max-width: 520px) {
   section .transparent_cards_wrap .transparent_cards_item {
     max-width: calc(50% - 4px);
+    padding: 10px 15px 6px;
+    min-height: 70px;
+    border-radius: 20px;
   }
 }
 @media screen and (max-width: 1450px) {
@@ -1295,6 +1336,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 .vacancy {
   padding: 160px 0;
 }
+@media screen and (max-width: 520px) {
+  .vacancy {
+    padding: 20px 0;
+  }
+}
 
 .contact_us {
   padding-bottom: 160px;
@@ -1312,6 +1358,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 .contact_us .transparent_box .form_container .form_actions {
   margin-top: 45px;
 }
+@media screen and (max-width: 650px) {
+  .contact_us .transparent_box .form_container {
+    margin-top: 0;
+  }
+}
 .contact_us .transparent_box .curve_line {
   right: -34%;
   top: -200px;
@@ -1325,18 +1376,20 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 }
 @media screen and (max-width: 1090px) {
   .contact_us .transparent_box .curve_line {
-    top: 40%;
-    right: -50%;
-  }
-}
-@media screen and (max-width: 1090px) {
-  .contact_us .transparent_box .curve_line {
     width: 600px;
+    top: 40%;
+    right: -400px;
   }
 }
 @media screen and (max-width: 1600px) {
   .contact_us .transparent_box {
     padding: 80px 50px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .contact_us .transparent_box {
+    padding: 30px 24px;
+    border-radius: 40px;
   }
 }
 .contact_us .circle.top-left {
@@ -1386,6 +1439,12 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   line-height: 24px;
   margin-bottom: 12px;
 }
+@media screen and (max-width: 520px) {
+  .footer .footer_info .footer_info_item .item_name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 .footer .footer_info .footer_info_item .item_info {
   color: #d2d3d7;
   font-family: Gilroy;
@@ -1393,6 +1452,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+}
+@media screen and (max-width: 520px) {
+  .footer .footer_info .footer_info_item {
+    padding-top: 0;
+  }
 }
 .footer .circle {
   width: 130px;
@@ -1403,6 +1467,16 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 @media screen and (max-width: 1600px) {
   .footer .circle {
     top: -65px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .footer .circle {
+    display: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  .footer {
+    padding: 60px 0 30px;
   }
 }
 
@@ -1445,6 +1519,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   padding: 25px 38px;
   transition: 0.3s ease-in-out;
 }
+.partners-slider .swiper-wrapper .swiper-slide .item_provider_game:hover {
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: 0px 1px 50px 0px rgba(227, 222, 255, 0.2) inset, 0px 5px 22px 0px rgba(154, 146, 210, 0.3) inset, 0px 123px 125px -60px rgba(202, 172, 255, 0.3) inset, 0px -102px 85px -80px rgba(96, 68, 144, 0.3) inset, 0px 9px 14px -5px #fff inset, 0px 48px 70px -45px rgba(255, 255, 255, 0.5) inset;
+  border-color: transparent;
+}
 .partners-slider .swiper-wrapper .swiper-slide .item_provider_game .provider_image {
   max-width: 140px;
 }
@@ -1452,11 +1531,6 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   .partners-slider .swiper-wrapper .swiper-slide .item_provider_game .provider_image {
     max-width: 100px;
   }
-}
-.partners-slider .swiper-wrapper .swiper-slide .item_provider_game:hover {
-  background: rgba(196, 196, 196, 0.01);
-  box-shadow: 0px 1px 50px 0px rgba(227, 222, 255, 0.2) inset, 0px 5px 22px 0px rgba(154, 146, 210, 0.3) inset, 0px 123px 125px -60px rgba(202, 172, 255, 0.3) inset, 0px -102px 85px -80px rgba(96, 68, 144, 0.3) inset, 0px 9px 14px -5px #fff inset, 0px 48px 70px -45px rgba(255, 255, 255, 0.5) inset;
-  border-color: transparent;
 }
 @media screen and (max-width: 520px) {
   .partners-slider .swiper-wrapper .swiper-slide .item_provider_game {
