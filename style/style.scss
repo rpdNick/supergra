@@ -568,10 +568,10 @@ body {
 /** Global End*/
 
 body {
-    background-image: url(../img/main-bg.webp);
-    background-size: cover;
+    background-image: url(../img/main-bg.png);
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 
 main {
