@@ -82,8 +82,17 @@ a {
   align-items: center;
   min-width: 56px;
   min-height: 56px;
+  max-height: 56px;
   border-radius: 50%;
   padding: 16px;
+}
+@media screen and (max-width: 520px) {
+  .button.circular {
+    min-width: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    padding: 12px;
+  }
 }
 .button::before {
   content: "";
@@ -143,6 +152,9 @@ a {
 }
 .icon.icon-menu {
   background-image: url(../img/menu.svg);
+}
+.icon.icon-close {
+  background-image: url(../img/close.svg);
 }
 
 .blur-circle {
@@ -484,8 +496,81 @@ a {
   }
 }
 
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(15, 15, 21, 0.6);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  opacity: 0;
+  transition: 0.3s;
+  visibility: hidden;
+  z-index: 11;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s;
+  visibility: hidden;
+  z-index: 11;
+}
+.popup .popup_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 102px;
+  padding: 0 1px;
+}
+.popup .popup_header .button_close {
+  pointer-events: none;
+}
+@media screen and (max-width: 520px) {
+  .popup .popup_header .button_close {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+  }
+}
+.popup .menu_list {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.popup .menu_list .menu_item_popup {
+  color: #a9a7b7;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  cursor: pointer;
+}
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.active .button_close {
+  pointer-events: all;
+}
+
 body {
   font-family: "Gilroy";
+}
+body.popup_open {
+  overflow: hidden;
+}
+body.popup_open .overlay {
+  opacity: 1;
+  visibility: visible;
 }
 body::-webkit-scrollbar-track {
   background-color: rgba(16, 16, 16, 0.95);
@@ -1603,12 +1688,21 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   max-width: 456px;
 }
 .vacancy-slider .swiper-slide .vacancy_card {
+  display: flex;
+  flex-direction: column;
   padding: 24px;
   border-radius: 24px;
   border: 1px solid rgba(15, 15, 21, 0.4);
   background: rgba(15, 15, 21, 0.6);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  min-height: 319px;
+  max-height: 319px;
+}
+@media screen and (max-width: 520px) {
+  .vacancy-slider .swiper-slide .vacancy_card {
+    max-height: 312px;
+  }
 }
 .vacancy-slider .swiper-slide .vacancy_card .card_header {
   display: flex;
@@ -1617,11 +1711,21 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+@media screen and (max-width: 520px) {
+  .vacancy-slider .swiper-slide .vacancy_card .card_header {
+    padding-bottom: 12px;
+  }
+}
 .vacancy-slider .swiper-slide .vacancy_card .card_header .vacancy_name {
   display: flex;
   align-items: center;
   color: #fff;
   min-height: 72px;
+}
+@media screen and (max-width: 520px) {
+  .vacancy-slider .swiper-slide .vacancy_card .card_header .vacancy_name {
+    min-height: 56px;
+  }
 }
 .vacancy-slider .swiper-slide .vacancy_card .card_header .vacancy_name > span {
   font-size: 32px;
@@ -1640,6 +1744,12 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   -webkit-text-decoration-color: transparent;
   -moz-text-decoration-color: transparent;
 }
+@media screen and (max-width: 520px) {
+  .vacancy-slider .swiper-slide .vacancy_card .card_header .vacancy_name > span {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
 .vacancy-slider .swiper-slide .vacancy_card .card_header .vacancy_name:hover > span {
   text-decoration-color: #fff;
   -webkit-text-decoration-color: #fff;
@@ -1647,6 +1757,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 }
 .vacancy-slider .swiper-slide .vacancy_card .card_header .icon-hot {
   width: 58px;
+}
+@media screen and (max-width: 520px) {
+  .vacancy-slider .swiper-slide .vacancy_card .card_header .icon-hot {
+    width: 45px;
+  }
 }
 .vacancy-slider .swiper-slide .vacancy_card .dscription {
   margin-top: 20px;
@@ -1661,10 +1776,17 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 520px) {
+  .vacancy-slider .swiper-slide .vacancy_card .dscription {
+    font-size: 16px;
+    -webkit-line-clamp: 5;
+  }
+}
 .vacancy-slider .swiper-slide .vacancy_card .card_footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  align-items: flex-end;
+  margin-top: auto;
 }
 .vacancy-slider .swiper-slide .vacancy_card .card_footer .info {
   display: flex;
@@ -1683,11 +1805,22 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 .vacancy-slider .swiper-slide .vacancy_card .card_footer .info .info_item .icon {
   margin-right: 8px;
 }
+@media screen and (max-width: 400px) {
+  .vacancy-slider .swiper-slide .vacancy_card .card_footer .info {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .vacancy-slider .swiper-slide .vacancy_card .card_footer {
+    align-items: center;
+  }
+}
 @media screen and (max-width: 900px) {
   .vacancy-slider .swiper-slide .vacancy_card {
     background: rgba(15, 15, 21, 0.8);
     -webkit-backdrop-filter: blur(0);
             backdrop-filter: blur(0);
+    padding: 16px;
   }
 }
 @media screen and (max-width: 1450px) {

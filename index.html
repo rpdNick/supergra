@@ -35,7 +35,7 @@
                 <button href="#contact_us" class="button circular primary scroll-to contact_btn_mob">
                     <i class="icon icon-phone"></i>
                 </button>
-                <button class="button circular button_blue menu_button">
+                <button class="button circular button_blue" id="menu_button">
                     <i class="icon icon-menu"></i>
                 </button>
             </div>
@@ -419,12 +419,12 @@
                         <div class="swiper-slide">
                             <div class="vacancy_card">
                                 <div class="card_header">
-                                    <a href="#" class="vacancy_name"><span>Graphic Designer</span></a>
+                                    <a href="#" class="vacancy_name"><span>Data Engineer</span></a>
                                     <img class="icon-hot" src="./img/fire.png" alt="fire">
                                 </div>
                                 <div class="dscription">
                                     Softum — продуктова IT компанія, яка займається не тільки розробкою, а й просуванням
-                                    свого продукту. Зараз ми шукаємо у свою команду Graphic Designer-a.
+                                    свого продукту. Зараз ми шукаємо у свою команду Data Engineer-a.
                                 </div>
                                 <div class="card_footer">
                                     <div class="info">
@@ -656,10 +656,30 @@
             </div>
             <i class="circle"></i>
         </footer>
+        <div class="overlay"></div>
+        <div class="popup popup_menu container responsive_wrapper" id="menu">
+            <div class="popup_header">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+                <button class="button circular button_blue button_close">
+                    <i class="icon icon-close"></i>
+                </button>
+            </div>
+            <div class="menu_list">
+                <div href="#about" class="menu_item_popup scroll-to">Про нас</div>
+                <div href="#advantages" class="menu_item_popup scroll-to">Переваги</div>
+                <div href="#partners" class="menu_item_popup scroll-to">Партнери</div>
+                <div href="#valuables" class="menu_item_popup scroll-to">Цінності</div>
+                <div href="#why_choose_us" class="menu_item_popup scroll-to">Чому ми?</div>
+                <div href="#vacancy" class="menu_item_popup scroll-to">Вакансії</div>
+                <div href="#footer" class="menu_item_popup scroll-to">Контакти</div>
+            </div>
+        </div>
     </main>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/smoothScroll.js"></script>
+    <!-- <script src="./js/smoothScroll.js"></script> -->
     <script src="./js/mask.js"></script>
     <script src="./js/file.js"></script>
 </body>
