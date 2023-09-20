@@ -201,6 +201,10 @@ a {
     &.gradient_pink_blue {
         background: $gradient-pink-blue;
     }
+
+    @media screen and (max-width: 520px) {
+        display: none;
+    }
 }
 
 .transparent_box {
@@ -221,6 +225,10 @@ a {
 
     &.radius-40 {
         border-radius: 40px;
+    }
+
+    @media screen and (max-width: 520px) {
+        backdrop-filter: blur(0);
     }
 }
 
@@ -581,7 +589,6 @@ main {
 
     .blur-circle {
         position: absolute;
-        transform: translateZ(0);
         z-index: -1;
 
         &.top-left {
@@ -947,7 +954,6 @@ section {
         @media screen and (max-width: 620px) {
             padding: 32px 24px;
             border-radius: 50px;
-            backdrop-filter: blur(4px);
         }
     }
 
@@ -1120,6 +1126,7 @@ section {
                 min-width: 200px;
                 width: 60%;
                 border-radius: 54px;
+                backdrop-filter: blur(0);
             }
         }
 
@@ -1352,6 +1359,11 @@ section {
                 min-width: 160px;
                 border-radius: 24px;
             }
+
+            @media screen and (max-width: 520px) {
+                background: rgba(15, 15, 21, 0.3);
+                backdrop-filter: blur(0);
+            }
         }
 
         @media screen and (max-width: 371px) {
@@ -1503,6 +1515,10 @@ section {
         filter: blur(200px);
         transform: rotate(180deg);
         z-index: -1;
+
+        @media screen and (max-width: 520px) {
+            display: none;
+        }
     }
 }
 
@@ -1605,7 +1621,7 @@ section {
                 height: 120px;
                 border-radius: 24px;
                 border: 1px solid rgba(15, 15, 21, 0.4);
-                background: rgba(15, 15, 21, 0.6);
+                background: rgba(15, 15, 21, 0.8);
                 backdrop-filter: blur(20px);
                 padding: 25px 38px;
                 transition: $transition ease-in-out;
@@ -1634,6 +1650,7 @@ section {
                     width: 160px;
                     height: 88px;
                     padding: 19px 30px;
+                    backdrop-filter: blur(0);
                 }
             }
         }
@@ -1736,6 +1753,11 @@ section {
                         }
                     }
                 }
+            }
+
+            @media screen and (max-width: 520px) {
+                background: rgba(15, 15, 21, 0.8);
+                backdrop-filter: blur(0);
             }
         }
     }
