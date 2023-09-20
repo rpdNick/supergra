@@ -503,6 +503,8 @@ main {
 }
 main .blur-circle {
   position: absolute;
+  transform: translateZ(0);
+  z-index: -1;
 }
 main .blur-circle.top-left {
   width: 953px;
@@ -1070,6 +1072,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   filter: blur(200px);
   left: -400px;
   top: 0;
+  z-index: -1;
 }
 @media screen and (max-width: 920px) {
   .about .blur-circle {
