@@ -523,7 +523,6 @@ main .blur-circle.top-left {
   top: -476.5px;
   transform: rotate(-90deg);
   filter: blur(200px);
-  z-index: -1;
 }
 main .blur-circle.top-right {
   width: 953px;
@@ -533,7 +532,6 @@ main .blur-circle.top-right {
   transform: rotate(-90deg);
   border-radius: 953px;
   filter: blur(200px);
-  z-index: -1;
 }
 @media screen and (max-width: 620px) {
   main .blur-circle.top-right {
@@ -915,6 +913,12 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     left: -100px;
   }
 }
+@media screen and (max-width: 480px) {
+  .main_screen .ms-left-line {
+    width: 250px;
+    bottom: 195px;
+  }
+}
 .main_screen .ms-middle-line {
   max-width: 692px;
   top: -280px;
@@ -946,6 +950,13 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     width: 350px;
     top: -20px;
     right: -50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main_screen .ms-right-line {
+    width: 300px;
+    top: 26px;
+    right: -95px;
   }
 }
 
@@ -1122,6 +1133,12 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 .advantages .advantages_curve_line_right {
   top: 251px;
   right: -250px;
+}
+@media screen and (max-width: 520px) {
+  .advantages .advantages_curve_line_right {
+    width: 450px;
+    top: 600px;
+  }
 }
 .advantages .circle {
   top: 50%;
@@ -1321,11 +1338,6 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   flex-shrink: 0;
   filter: blur(200px);
 }
-@media screen and (max-width: 920px) {
-  .why_choose_us .blur-circle {
-    width: 500px;
-  }
-}
 .why_choose_us .curve_line_left {
   max-width: 1000px;
   left: -400px;
@@ -1336,6 +1348,13 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     max-width: 580px;
     left: -290px;
     top: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  .why_choose_us .curve_line_left {
+    width: 350px;
+    left: -190px;
+    top: 20px;
   }
 }
 .why_choose_us .curve_line_right {
@@ -1419,6 +1438,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   left: -140px;
   top: -140px;
   z-index: -1;
+}
+@media screen and (max-width: 520px) {
+  .contact_us .circle {
+    display: none;
+  }
 }
 .contact_us .section-bg {
   position: absolute;

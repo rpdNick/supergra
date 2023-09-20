@@ -598,7 +598,6 @@ main {
             top: calc(-953px / 2);
             transform: rotate(-90deg);
             filter: blur(200px);
-            z-index: -1;
         }
 
         &.top-right {
@@ -609,7 +608,6 @@ main {
             transform: rotate(-90deg);
             border-radius: 953px;
             filter: blur(200px);
-            z-index: -1;
 
             @media screen and (max-width: 620px) {
                 width: 253px;
@@ -983,6 +981,11 @@ section {
             bottom: 120px;
             left: -100px;
         }
+
+        @media screen and (max-width: 480px) {
+            width: 250px;
+            bottom: 195px;
+        }
     }
 
     .ms-middle-line {
@@ -1013,6 +1016,12 @@ section {
             width: 350px;
             top: -20px;
             right: -50px;
+        }
+
+        @media screen and (max-width: 480px) {
+            width: 300px;
+            top: 26px;
+            right: -95px;
         }
     }
 }
@@ -1193,6 +1202,11 @@ section {
     .advantages_curve_line_right {
         top: 251px;
         right: -250px;
+
+        @media screen and (max-width: 520px) {
+            width: 450px;
+            top: 600px;
+        }
     }
 
     .circle {
@@ -1399,10 +1413,6 @@ section {
         transform: rotate(-90deg);
         flex-shrink: 0;
         filter: blur(200px);
-
-        @media screen and (max-width: 920px) {
-            width: 500px;
-        }
     }
 
     .curve_line_left {
@@ -1414,6 +1424,12 @@ section {
             max-width: 580px;
             left: calc(-580px / 2);
             top: 0;
+        }
+
+        @media screen and (max-width: 520px) {
+            width: 350px;
+            left: -190px;
+            top: 20px;
         }
     }
 
@@ -1496,6 +1512,10 @@ section {
             left: calc(-280px / 2);
             top: calc(-280px / 2);
             z-index: -1;
+        }
+
+        @media screen and (max-width: 520px) {
+           display: none;
         }
     }
 
@@ -1648,7 +1668,7 @@ section {
                 }
 
                 @media screen and (max-width: 920px) {
-                     backdrop-filter: blur(0);
+                    backdrop-filter: blur(0);
                 }
 
                 @media screen and (max-width: 520px) {
