@@ -157,7 +157,7 @@ a {
 .blur-circle.gradient_pink_blue {
   background: linear-gradient(333deg, rgba(62, 123, 250, 0.9) 25.31%, rgba(102, 0, 204, 0.8) 50.31%, rgba(255, 16, 117, 0.8) 77.4%, rgba(255, 29, 219, 0.8) 100%);
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 920px) {
   .blur-circle {
     display: none;
   }
@@ -543,6 +543,11 @@ main .blur-circle.top-right {
     top: 100px;
     border-radius: 50%;
     filter: blur(50px);
+  }
+}
+@media screen and (max-width: 920px) {
+  main .blur-circle {
+    display: none;
   }
 }
 

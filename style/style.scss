@@ -202,7 +202,7 @@ a {
         background: $gradient-pink-blue;
     }
 
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 920px) {
         display: none;
     }
 }
@@ -619,6 +619,10 @@ main {
                 border-radius: 50%;
                 filter: blur(50px);
             }
+        }
+
+        @media screen and (max-width: 920px) {
+            display: none;
         }
     }
 }
