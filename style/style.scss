@@ -227,7 +227,7 @@ a {
         border-radius: 40px;
     }
 
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 920px) {
         backdrop-filter: blur(0);
     }
 }
@@ -1115,6 +1115,7 @@ section {
 
             @media screen and (max-width: 920px) {
                 border-radius: 100px;
+                backdrop-filter: blur(0);
             }
 
             @media screen and (max-width: 520px) {
@@ -1126,7 +1127,6 @@ section {
                 min-width: 200px;
                 width: 60%;
                 border-radius: 54px;
-                backdrop-filter: blur(0);
             }
         }
 
@@ -1358,11 +1358,8 @@ section {
                 min-height: 216px;
                 min-width: 160px;
                 border-radius: 24px;
-            }
-
-            @media screen and (max-width: 520px) {
-                background: rgba(15, 15, 21, 0.3);
                 backdrop-filter: blur(0);
+                background: rgba(15, 15, 21, 0.3);
             }
         }
 
@@ -1646,11 +1643,14 @@ section {
                     }
                 }
 
+                @media screen and (max-width: 920px) {
+                     backdrop-filter: blur(0);
+                }
+
                 @media screen and (max-width: 520px) {
                     width: 160px;
                     height: 88px;
                     padding: 19px 30px;
-                    backdrop-filter: blur(0);
                 }
             }
         }
@@ -1755,7 +1755,7 @@ section {
                 }
             }
 
-            @media screen and (max-width: 520px) {
+            @media screen and (max-width: 900px) {
                 background: rgba(15, 15, 21, 0.8);
                 backdrop-filter: blur(0);
             }

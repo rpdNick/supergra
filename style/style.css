@@ -176,7 +176,7 @@ a {
 .transparent_box.radius-40 {
   border-radius: 40px;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 920px) {
   .transparent_box {
     -webkit-backdrop-filter: blur(0);
             backdrop-filter: blur(0);
@@ -1041,6 +1041,8 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 @media screen and (max-width: 920px) {
   .about .grid_wrap .avatar_box {
     border-radius: 100px;
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
   }
 }
 @media screen and (max-width: 520px) {
@@ -1053,8 +1055,6 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     min-width: 200px;
     width: 60%;
     border-radius: 54px;
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
   }
 }
 @media screen and (max-width: 1400px) {
@@ -1278,13 +1278,9 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     min-height: 216px;
     min-width: 160px;
     border-radius: 24px;
-  }
-}
-@media screen and (max-width: 520px) {
-  .valuables .valuables_wrap .card_item {
-    background: rgba(15, 15, 21, 0.3);
     -webkit-backdrop-filter: blur(0);
             backdrop-filter: blur(0);
+    background: rgba(15, 15, 21, 0.3);
   }
 }
 @media screen and (max-width: 371px) {
@@ -1557,13 +1553,17 @@ section .transparent_cards_wrap .transparent_cards_item .description {
     max-width: 100px;
   }
 }
+@media screen and (max-width: 920px) {
+  .partners-slider .swiper-wrapper .swiper-slide .item_provider_game {
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
+}
 @media screen and (max-width: 520px) {
   .partners-slider .swiper-wrapper .swiper-slide .item_provider_game {
     width: 160px;
     height: 88px;
     padding: 19px 30px;
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
   }
 }
 
@@ -1654,7 +1654,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 .vacancy-slider .swiper-slide .vacancy_card .card_footer .info .info_item .icon {
   margin-right: 8px;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 900px) {
   .vacancy-slider .swiper-slide .vacancy_card {
     background: rgba(15, 15, 21, 0.8);
     -webkit-backdrop-filter: blur(0);
