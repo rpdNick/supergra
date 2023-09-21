@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>supergra</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./font/Gilroy/stylesheet.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/inputmask.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="main_header container responsive_wrapper">
+            <a class="logo" href="#">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+            <nav class="menu_main horizontal">
+                <div href="#about" class="menu_item scroll-to">Про нас</div>
+                <div href="#advantages" class="menu_item scroll-to">Переваги</div>
+                <div href="#partners" class="menu_item scroll-to">Партнери</div>
+                <div href="#valuables" class="menu_item scroll-to">Цінності</div>
+                <div href="#why_choose_us" class="menu_item scroll-to">Чому ми?</div>
+                <div href="#vacancy" class="menu_item scroll-to">Вакансії</div>
+                <div href="#footer" class="menu_item scroll-to">Контакти</div>
+            </nav>
+            <button href="#contact_us" class="button primary scroll-to contact_btn">
+                <span class="caption">Зв'яжіться з нами</span>
+            </button>
+            <div class="buttons_wrap">
+                <button href="#contact_us" class="button circular primary scroll-to contact_btn_mob">
+                    <i class="icon icon-phone"></i>
+                </button>
+                <button class="button circular button_blue" id="menu_button">
+                    <i class="icon icon-menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- <div class="blur-circle top-right blue"></div> -->
+        <section class="vacancy_info section_wrap responsive_wrapper">
+            <a class="button primary" href="index.html">
+                <i class="icon icon-arrow-left"></i>
+                <span class="caption">Повернутись</span>
+            </a>
+            <div class="vacancy_info_content">
+                <div class="section_title txt_shadow responsive_wrapper">Graphic Designer</div>
+                <div class="vacancy_description">
+                    <p>Softum — продуктова IT компанія, яка займається не тільки розробкою, а й просуванням свого
+                        продукту.</p>
+                    <p>Зараз ми шукаємо у свою команду Graphic Designer-a.</p>
+                    <p>Вимоги:</p>
+                    <ul>
+                        <li>Досвід роботи від 3-х років на позиції Graphic Designer;</li>
+                        <li>Просунуте володіння Photoshop, Illustrator, After Effects, Figma;</li>
+                        <li>Знання 3D дизайну — буде перевагою;</li>
+                        <li>Досвід роботи в агенції — буде перевагою.</li>
+                    </ul>
+                    <p>Обов’язки:</p>
+                    <ul>
+                        <li>Розробка графічного контенту для digital каналів комунікації;</li>
+                        <li>Створення графіки для рекламних проявів продуктів компанії;</li>
+                        <li>Формування базової анімації (банери, контент для SMM);</li>
+                        <li>Дизайн лендингів.</li>
+                    </ul>
+                    <p>Ми пропонуємо:</p>
+                    <ul>
+                        <li>Сучасний офіс поруч з метро;</li>
+                        <li>Молодий і дружній колектив;</li>
+                        <li>Графік роботи з 10:00 до 19:00;</li>
+                        <li>Кафе на території офісу;</li>
+                        <li>Можливість кар'єрного і професійного зростання;</li>
+                        <li>Офіційне оформлення, оплачувана відпустка та лікарняні;</li>
+                        <li>Піца, напої, настільні ігри коштом компанії;</li>
+                        <li>Ми за спорт, тому щотижня граємо у волейбол;</li>
+                        <li>Кава, чай, печиво, фрукти та гарний настрій щодня.</li>
+                        <li>Чекаємо на твоє резюме із зазначенням бажаного рівня заробітної плати.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="contact_us" id="contact_us">
+            <div class="section_wrap responsive_wrapper">
+                <div class="section_title txt_shadow mobile_title">Зв'яжіться з нами</div>
+                <div class="transparent_box radius-90">
+                    <div class="section_title txt_shadow pc_title">Зв'яжіться з нами</div>
+                    <div class="form_container">
+                        <form id="main_contact_form" method="" action="">
+                            <div class="form_grid">
+                                <div class="form_item">
+                                    <label class="form_item_label" for="main_contact_name">Full name</label>
+                                    <input class="form_control" id="main_contact_name" type="text"
+                                        placeholder="Enter your name">
+                                </div>
+                                <div class="form_item">
+                                    <label class="form_item_label" for="main_contact_email">Email</label>
+                                    <input class="form_control" id="main_contact_email" type="text"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="form_item">
+                                    <label for="main_contact_phone" class="form_item_label">Phone number</label>
+                                    <input class="form_control phone_mask" size="40" class="phone"
+                                        id="main_contact_phone" aria-required="true" aria-invalid="false"
+                                        placeholder="+3" type="tel" name="tel-400" maxlength="13">
+                                </div>
+                                <div class="form_item">
+                                    <label class="form_item_label" for="main_contact_telegram">Telegram</label>
+                                    <input class="form_control" id="main_contact_telegram" type="text"
+                                        placeholder="Enter your telegram login">
+                                </div>
+                                <div class="form_item">
+                                    <label class="form_item_label" for="main_contact_cv">Завантажте CV</label>
+                                    <div class="form_control file_item">
+                                        <input type="file" name="file" size="40" id="main_contact_cv" class="attachment"
+                                            accept=".doc,.docx,.txt,.pdf" aria-required="true">
+                                        <span class="file_label">Додати файл</span>
+                                        <button type="button" class="button primary circular attach_file">
+                                            <i class="icon icon-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="file_hint">Файли .doc, .docx, .txt, .pdf до 2Mb</div>
+                                </div>
+                            </div>
+                            <div class="form_actions">
+                                <div class="checkbox_item">
+                                    <label class="checkbox_label" for="main_contact_agreement">
+                                        <input class="agreement_input" type="checkbox" id="main_contact_agreement"
+                                            aria-required>
+                                        <i class="checkbox"></i>
+                                        <span class="checkbox_txt">Я погоджуюсь на обробку моїх персональних
+                                            даних</span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="button secondary">
+                                    <span class="caption">Надіслати</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <img class="curve_line" src="./img/lines/curve-line7.png" alt="art-line">
+                </div>
+            </div>
+            <i class="circle top-left"></i>
+            <div class="section-bg"></div>
+        </section>
+        <footer class="footer dark_bg" id="footer">
+            <div class="section_wrap responsive_wrapper">
+                <div class="section_title txt_shadow">Контакти</div>
+                <div class="footer_info">
+                    <div class="footer_info_item">
+                        <div class="item_name">Телефон</div>
+                        <div class="item_info">
+                            <span>Марія</span>
+                            <span>+380 932 260 291</span>
+                        </div>
+                    </div>
+                    <div class="footer_info_item">
+                        <div class="item_name">Наш email</div>
+                        <div class="item_info">
+                            <span>hr@softum.io</span>
+                        </div>
+                    </div>
+                    <div class="footer_info_item">
+                        <div class="item_name">Графiк роботи:</div>
+                        <div class="item_info">
+                            <span>Пн-Пт з 10:00 до 19:00</span>
+                        </div>
+                    </div>
+                    <div class="footer_info_item">
+                        <a class="logo" href="#">
+                            <img src="./img/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <i class="circle"></i>
+        </footer>
+    </main>
+    <script src="./js/menu.js"></script>
+    <script src="./js/mask.js"></script>
+    <script src="./js/file.js"></script>
+</body>
+
+</html>

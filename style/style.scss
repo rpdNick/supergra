@@ -82,11 +82,17 @@ a {
 }
 
 .button {
+    display: inline-grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     position: relative;
     padding: 14px 20px;
     border-radius: 8px;
     color: $color-white;
     font-size: 20px;
+    line-height: 28px;
     font-weight: 700;
     outline: none;
     border: none;
@@ -96,7 +102,7 @@ a {
         0px 2px 4px 0px rgba(0, 0, 0, 0.32),
         0px 0px 1px 0px rgba(0, 0, 0, 0.04);
 
-    .ception,
+    .caption,
     .icon {
         position: relative;
         color: inherit;
@@ -179,6 +185,10 @@ a {
 
     &.icon-arrow-right {
         background-image: url(../img/arrow-right.svg);
+    }
+
+    &.icon-arrow-left {
+        background-image: url(../img/arrow-left.svg);
     }
 
     &.icon-plus {
@@ -670,7 +680,7 @@ body {
 
 body {
     background-image: url(../img/main-bg.png);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: repeat-y;
 }
@@ -1929,5 +1939,29 @@ section {
 
     @media screen and (max-width: 379px) {
         padding: 60px 16px;
+    }
+}
+
+/* Vacancy page*/
+
+.vacancy_info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    ul {
+        padding-left: 35px;
+        margin: 20px 0;
+    }
+
+    .vacancy_info_content {
+        padding-top: 24px;
+
+        .vacancy_description {
+            padding-top: 60px;
+            color: $color-white;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28px;
+        }
     }
 }
