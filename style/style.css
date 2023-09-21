@@ -697,6 +697,7 @@ header .main_header {
   height: 100px;
   padding: 0 60px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 header .main_header .menu_main {
@@ -751,9 +752,6 @@ header .main_header .menu_main .menu_item:hover::before {
   header .main_header .menu_main {
     display: none;
   }
-}
-header .main_header .contact_btn {
-  margin-left: auto;
 }
 @media screen and (max-width: 1287px) {
   header .main_header .contact_btn {

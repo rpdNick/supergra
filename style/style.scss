@@ -638,7 +638,7 @@ a {
             cursor: pointer;
         }
 
-        @media screen and (orientation:landscape) {
+        @media screen and (orientation: landscape) {
             padding: 180px 0 20px;
         }
     }
@@ -775,6 +775,7 @@ header {
         height: $header-h;
         padding: 0 60px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
 
         .menu_main {
@@ -834,8 +835,6 @@ header {
         }
 
         .contact_btn {
-            margin-left: auto;
-
             @media screen and (max-width: 1287px) {
                 display: none;
             }
@@ -1997,8 +1996,8 @@ section {
             line-height: 28px;
 
             @media screen and (max-width: 520px) {
-               font-size: 16px;
-               line-height: 20px;
+                font-size: 16px;
+                line-height: 20px;
             }
         }
     }
