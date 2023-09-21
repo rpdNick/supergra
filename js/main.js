@@ -68,9 +68,9 @@ let vacancySlider = initSlider(".vacancy-slider", vacancySliderOptions);
 
 // Menu modal
 const siteBody = document.querySelector("body");
+const menu = document.getElementById("menu");
 const menuButton = document.getElementById("menu_button");
 menuButton.addEventListener("click", function () {
-  const menu = document.getElementById("menu");
   showPopup(menu);
 });
 
@@ -92,10 +92,18 @@ closeButton.forEach(function (el) {
   });
 });
 
+// check menu on page resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1287 && menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    siteBody.classList.remove("popup_open");
+  }
+});
+
 // Menu scroll
 const smoothScroll = function (targetEl, duration) {
   const headerElHeight =
-    document.querySelector(".main_header").clientHeight + 24;
+    document.querySelector(".main_header").clientHeight + 10;
   let target = document.querySelector(targetEl);
   let targetPosition = target.getBoundingClientRect().top - headerElHeight;
   let startPosition = window.pageYOffset;
