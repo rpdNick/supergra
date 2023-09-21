@@ -1148,7 +1148,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   max-width: 272px;
   width: 100%;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1550px) {
   .about .grid_wrap .avatar_box .avarat_img {
     max-width: 200px;
   }
