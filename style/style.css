@@ -555,9 +555,9 @@ a {
   justify-content: center;
   align-items: center;
   overflow-y: auto;
-  max-height: calc(100vh - 160px);
-  gap: 24px;
+  max-height: calc(100% - 100px);
   padding: 60px 0 20px;
+  gap: 24px;
 }
 .popup .menu_list .menu_item_popup {
   color: #a9a7b7;
@@ -565,6 +565,11 @@ a {
   font-weight: 600;
   line-height: 32px;
   cursor: pointer;
+}
+@media screen and (orientation: landscape) {
+  .popup .menu_list {
+    padding: 160px 0 20px;
+  }
 }
 .popup.active {
   opacity: 1;
@@ -642,6 +647,37 @@ main .blur-circle.top-right {
 }
 @media screen and (max-width: 920px) {
   main .blur-circle {
+    display: none;
+  }
+}
+main .vacancy_page_line_mob {
+  display: none;
+}
+@media screen and (max-width: 520px) {
+  main .vacancy_page_line_mob {
+    display: block;
+    width: 350px;
+    top: 40px;
+    right: -50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .vacancy_page_line_mob {
+    width: 300px;
+  }
+}
+main .vacancy_page_line {
+  max-width: 700px;
+  right: 0;
+  top: 0;
+}
+@media screen and (max-width: 1100px) {
+  main .vacancy_page_line {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 520px) {
+  main .vacancy_page_line {
     display: none;
   }
 }
@@ -1869,4 +1905,10 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   font-size: 24px;
   font-weight: 500;
   line-height: 28px;
+}
+@media screen and (max-width: 520px) {
+  .vacancy_info .vacancy_info_content .vacancy_description {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
