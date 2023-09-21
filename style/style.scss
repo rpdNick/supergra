@@ -588,7 +588,6 @@ a {
     top: 0;
     bottom: 0;
     opacity: 0;
-    overflow-y: auto;
     transition: $transition;
     visibility: hidden;
     z-index: 11;
@@ -612,12 +611,14 @@ a {
     }
 
     .menu_list {
-        margin-top: 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow-y: auto;
+        max-height: calc(100vh - 160px);
         gap: 24px;
+        padding: 60px 0 20px;
 
         .menu_item_popup {
             color: #a9a7b7;
