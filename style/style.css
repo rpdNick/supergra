@@ -702,7 +702,7 @@ header .main_header {
 header .main_header .menu_main {
   display: flex;
   gap: 30px;
-  margin-left: 118px;
+  margin: 0 auto;
 }
 header .main_header .menu_main.horizontal {
   flex-direction: row;

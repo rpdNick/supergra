@@ -780,7 +780,7 @@ header {
         .menu_main {
             display: flex;
             gap: 30px;
-            margin-left: 118px;
+            margin: 0 auto;
 
             &.horizontal {
                 flex-direction: row;
