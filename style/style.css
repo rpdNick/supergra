@@ -568,7 +568,7 @@ a {
 }
 @media screen and (orientation: landscape) {
   .popup .menu_list {
-    padding: 160px 0 20px;
+    padding: 180px 0 20px;
   }
 }
 .popup.active {
