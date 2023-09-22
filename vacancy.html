@@ -101,32 +101,44 @@
                     <div class="form_container">
                         <form id="main_contact_form" method="" action="">
                             <div class="form_grid">
-                                <div class="form_item">
+                                <div class="form_item flex_wrap">
                                     <label class="form_item_label" for="main_contact_name">Full name</label>
-                                    <input class="form_control" id="main_contact_name" type="text"
-                                        placeholder="Enter your name">
+                                    <div class="input_wrap">
+                                        <input class="form_control" id="main_contact_name" type="text"
+                                            placeholder="Enter your name" data-required>
+                                        <i class="icon icon-caution"></i>
+                                    </div>
                                 </div>
-                                <div class="form_item">
+                                <div class="form_item flex_wrap">
                                     <label class="form_item_label" for="main_contact_email">Email</label>
-                                    <input class="form_control" id="main_contact_email" type="text"
-                                        placeholder="Enter your email">
+                                    <div class="input_wrap">
+                                        <input class="form_control" id="main_contact_email" type="email"
+                                            placeholder="Enter your email" data-required>
+                                        <i class="icon icon-caution"></i>
+                                    </div>
                                 </div>
-                                <div class="form_item">
+                                <div class="form_item flex_wrap">
                                     <label for="main_contact_phone" class="form_item_label">Phone number</label>
-                                    <input class="form_control phone_mask" size="40" class="phone"
-                                        id="main_contact_phone" aria-required="true" aria-invalid="false"
-                                        placeholder="+3" type="tel" name="tel-400" maxlength="13">
+                                    <div class="input_wrap">
+                                        <input class="form_control phone_mask" size="40" class="phone"
+                                            id="main_contact_phone" placeholder="+3" type="tel" name="tel-400"
+                                            maxlength="13" data-required>
+                                        <i class="icon icon-caution"></i>
+                                    </div>
                                 </div>
-                                <div class="form_item">
+                                <div class="form_item flex_wrap">
                                     <label class="form_item_label" for="main_contact_telegram">Telegram</label>
-                                    <input class="form_control" id="main_contact_telegram" type="text"
-                                        placeholder="Enter your telegram login">
+                                    <div class="input_wrap">
+                                        <input class="form_control" id="main_contact_telegram" type="text"
+                                            placeholder="Enter your telegram login">
+                                        <i class="icon icon-caution"></i>
+                                    </div>
                                 </div>
-                                <div class="form_item">
+                                <div class="form_item flex_wrap">
                                     <label class="form_item_label" for="main_contact_cv">Завантажте CV</label>
                                     <div class="form_control file_item">
                                         <input type="file" name="file" size="40" id="main_contact_cv" class="attachment"
-                                            accept=".doc,.docx,.txt,.pdf" aria-required="true">
+                                            accept=".doc,.docx,.txt,.pdf" data-required>
                                         <span class="file_label">Додати файл</span>
                                         <button type="button" class="button primary circular attach_file">
                                             <i class="icon icon-plus"></i>
@@ -136,10 +148,10 @@
                                 </div>
                             </div>
                             <div class="form_actions">
-                                <div class="checkbox_item">
+                                <div class="form_item checkbox_item">
                                     <label class="checkbox_label" for="main_contact_agreement">
                                         <input class="agreement_input" type="checkbox" id="main_contact_agreement"
-                                            aria-required>
+                                            data-required>
                                         <i class="checkbox"></i>
                                         <span class="checkbox_txt">Я погоджуюсь на обробку моїх персональних
                                             даних</span>
@@ -212,7 +224,7 @@
     </main>
     <script src="./js/menu.js"></script>
     <script src="./js/mask.js"></script>
-    <script src="./js/file.js"></script>
+    <script src="./js/form-validation.js"></script>
 </body>
 
 </html>

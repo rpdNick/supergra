@@ -206,6 +206,10 @@ a {
     &.icon-close {
         background-image: url(../img/close.svg);
     }
+
+    &.icon-caution {
+        background-image: url(../img/caution.svg);
+    }
 }
 
 .blur-circle {
@@ -368,32 +372,108 @@ a {
         }
     }
 
-    .form_item {
+    .flex_wrap {
         position: relative;
         display: flex;
         flex-direction: column;
+        gap: 4px;
+    }
 
+    .form_actions {
+        .checkbox_item {
+            margin-bottom: 12px;
+
+            .checkbox_label {
+                width: fit-content;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .checkbox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 18px;
+                min-height: 18px;
+                max-width: 18px;
+                max-height: 18px;
+                border: 1px solid #b6b3ec;
+                border-radius: 6px;
+                margin-right: 10px;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 12px;
+                    height: 9px;
+                    -webkit-mask-image: url(../img/checkmark.svg);
+                    mask-image: url(../img/checkmark.svg);
+                    mask-repeat: no-repeat;
+                    mask-size: cover;
+                    mask-position: center;
+                    background-color: #b6b3ec;
+                    opacity: 0;
+                    transition: $transition;
+                }
+            }
+
+            .checkbox_txt {
+                color: $color-white;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+            }
+
+            input {
+                display: none;
+            }
+
+            .agreement_input:checked ~ .checkbox {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .form_item {
         .form_item_label {
             color: #dbd7f3;
             font-size: 14px;
             font-style: normal;
             font-weight: 600;
             line-height: 16px;
-            margin-bottom: 4px;
+        }
+
+        .input_wrap {
+            position: relative;
+
+            .icon-caution {
+                display: none;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 18px;
+                width: 18px;
+                height: 18px;
+            }
         }
 
         .form_control {
             width: 100%;
             background: $color-white;
-            border: none;
+            border: 1px solid transparent;
             border-radius: 20px;
-            padding: 12px 16px;
+            padding: 12px 45px 12px 16px;
             font-size: 16px;
             font-weight: 400;
             line-height: 16px;
             max-width: 335px;
             color: #000;
             outline: none;
+            transition: $transition;
             -webkit-appearance: none;
 
             &::placeholder {
@@ -464,63 +544,18 @@ a {
             line-height: 16px;
             margin-top: 4px;
         }
-    }
 
-    .form_actions {
-        .checkbox_item {
-            margin-bottom: 12px;
+        &.error {
+            .form_control {
+                border-color: $color-primary;
+            }
 
-            .checkbox_label {
-                width: fit-content;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
+            .icon-caution {
+                display: block;
             }
 
             .checkbox {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-width: 18px;
-                min-height: 18px;
-                max-width: 18px;
-                max-height: 18px;
-                border: 1px solid #b6b3ec;
-                border-radius: 6px;
-                margin-right: 10px;
-                cursor: pointer;
-
-                &::before {
-                    content: "";
-                    display: block;
-                    width: 12px;
-                    height: 9px;
-                    -webkit-mask-image: url(../img/checkmark.svg);
-                    mask-image: url(../img/checkmark.svg);
-                    mask-repeat: no-repeat;
-                    mask-size: cover;
-                    mask-position: center;
-                    background-color: #b6b3ec;
-                    opacity: 0;
-                    transition: $transition;
-                }
-            }
-
-            .checkbox_txt {
-                color: $color-white;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-            }
-
-            input {
-                display: none;
-            }
-
-            .agreement_input:checked ~ .checkbox {
-                &:before {
-                    opacity: 1;
-                }
+              border-color: $color-primary;  
             }
         }
     }
