@@ -1,10 +1,11 @@
 $color-white: #fff;
 
-.notification_page {
-    .notify_content {
+.result_page {
+    .result_content {
         padding: 60px 0 104px;
+        min-height: calc(100svh - 438px);
 
-        .notification_wrap {
+        .result_wrap {
             padding-top: 64px;
             display: flex;
             flex-direction: column;
@@ -12,17 +13,8 @@ $color-white: #fff;
             align-items: center;
             gap: 24px;
 
-            .button {
-                min-width: 200px;
-            }
-        }
-    }
-
-    &.error_not_found {
-        .error_content {
-            .notify_image {
+            .result_image {
                 width: 100%;
-                max-width: 800px;
 
                 @media screen and (max-width: 520px) {
                     max-width: 250px;
@@ -46,6 +38,16 @@ $color-white: #fff;
                     font-size: 16px;
                     line-height: normal;
                 }
+            }
+
+            .button {
+                min-width: 200px;
+            }
+        }
+
+        &.error_content {
+            .result_image {
+                max-width: 800px;
             }
         }
     }

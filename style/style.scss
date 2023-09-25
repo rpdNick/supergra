@@ -261,18 +261,29 @@ a {
     background: rgba(15, 15, 21, 0.6);
 }
 
-// .marked {
-//     position: relative;
+.marked {
+    // position: relative;
+    // padding-left: 30px;
 
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         background-image: url(../img/title-marker.svg);
-//         background-position: left;
-//         background-size: contain;
-//         background-repeat: no-repeat;
-//     }
-// }
+    // &::before {
+    //     content: url(../img/title-mark.svg);
+    //     position: absolute;
+    //     width: 22px;
+    //     height: 100%;
+
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 22px;
+    //     height: 100%;
+    //     background-image: url(../img/title-mark.svg);
+    //     background-size: contain; 
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     z-index: -1;
+    // }
+}
 
 .circle {
     position: absolute;
@@ -555,7 +566,7 @@ a {
             }
 
             .checkbox {
-              border-color: $color-primary;  
+                border-color: $color-primary;
             }
         }
     }
@@ -1055,16 +1066,6 @@ section {
             @media screen and (max-width: 370px) {
                 max-width: 250px;
             }
-
-            // &.marked {
-            //     padding-left: calc(127px / 2 - 25px);
-
-            //     &::before {
-            //         width: 100%;
-            //         height: calc(100% + 27px);
-            //         left: calc(127px / 2 - 25px);
-            //     }
-            // }
         }
 
         .subtitle {
