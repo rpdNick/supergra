@@ -13,11 +13,6 @@
 .result_page .result_content .result_wrap .result_image {
   width: 100%;
 }
-@media screen and (max-width: 520px) {
-  .result_page .result_content .result_wrap .result_image {
-    max-width: 250px;
-  }
-}
 .result_page .result_content .result_wrap .message {
   color: #fff;
   text-align: center;
@@ -40,4 +35,12 @@
 }
 .result_page .result_content.error_content .result_image {
   max-width: 800px;
+}
+@media screen and (max-width: 520px) {
+  .result_page .result_content.error_content .result_image {
+    max-width: 250px;
+  }
+}
+.result_page .result_content.success_content .result_image {
+  max-width: 206px;
 }/*# sourceMappingURL=notification-pages.css.map */

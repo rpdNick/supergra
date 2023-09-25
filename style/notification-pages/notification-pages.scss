@@ -15,10 +15,6 @@ $color-white: #fff;
 
             .result_image {
                 width: 100%;
-
-                @media screen and (max-width: 520px) {
-                    max-width: 250px;
-                }
             }
 
             .message {
@@ -48,6 +44,16 @@ $color-white: #fff;
         &.error_content {
             .result_image {
                 max-width: 800px;
+
+                @media screen and (max-width: 520px) {
+                    max-width: 250px;
+                }
+            }
+        }
+
+        &.success_content {
+            .result_image {
+                max-width: 206px;
             }
         }
     }
