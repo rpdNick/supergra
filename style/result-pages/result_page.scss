@@ -2,7 +2,7 @@ $color-white: #fff;
 
 .result_page {
     .section_wrap {
-        .button {
+        > .button {
             margin-top: 64px;
         }
     }
@@ -12,7 +12,7 @@ $color-white: #fff;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 24px;
+        gap: 42px;
         padding: 60px 0 104px;
         min-height: calc(100svh - 328px);
 
@@ -30,7 +30,6 @@ $color-white: #fff;
             font-style: normal;
             font-weight: 700;
             line-height: 60px;
-            margin: 42px 0;
             max-width: 770px;
 
             @media screen and (max-width: 520px) {
