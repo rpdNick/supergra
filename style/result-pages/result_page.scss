@@ -57,5 +57,9 @@ $color-white: #fff;
                 max-width: 206px;
             }
         }
+
+        @media screen and (max-width: 520px) {
+           min-height: fit-content;
+        }
     }
 }
