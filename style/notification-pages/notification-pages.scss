@@ -1,0 +1,52 @@
+$color-white: #fff;
+
+.notification_page {
+    .notify_content {
+        padding: 60px 0 104px;
+
+        .notification_wrap {
+            padding-top: 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+
+            .button {
+                min-width: 200px;
+            }
+        }
+    }
+
+    &.error_not_found {
+        .error_content {
+            .notify_image {
+                width: 100%;
+                max-width: 800px;
+
+                @media screen and (max-width: 520px) {
+                    max-width: 250px;
+                }
+            }
+
+            .message {
+                color: $color-white;
+                text-align: center;
+                text-shadow:
+                    0px 0px 127.79053497314453px rgba(49, 119, 255, 0.5),
+                    0px 0px 33.009559631347656px rgba(49, 119, 255, 0.7);
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 60px;
+                margin: 42px 0;
+                max-width: 770px;
+
+                @media screen and (max-width: 520px) {
+                    font-size: 16px;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}

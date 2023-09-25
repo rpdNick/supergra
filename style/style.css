@@ -1659,6 +1659,9 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   font-weight: 500;
   line-height: 20px;
 }
+.footer .footer_info .footer_info_item .item_info > a {
+  color: inherit;
+}
 @media screen and (max-width: 520px) {
   .footer .footer_info .footer_info_item {
     padding-top: 0;

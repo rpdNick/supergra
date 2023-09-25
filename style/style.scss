@@ -1752,6 +1752,10 @@ section {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 20px;
+
+                > a {
+                    color: inherit;
+                }
             }
 
             @media screen and (max-width: 520px) {
