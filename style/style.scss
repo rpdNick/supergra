@@ -1220,7 +1220,7 @@ section {
             max-width: 808px;
             align-self: start;
 
-            .description_row {
+            > p {
                 color: #ffffffcc;
                 font-size: 24px;
                 font-style: normal;
@@ -1651,6 +1651,7 @@ section {
         .curve_line {
             right: -34%;
             top: -200px;
+            max-width: 1200px;
 
             @media screen and (max-width: 1400px) {
                 top: 0;

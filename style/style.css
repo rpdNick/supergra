@@ -1137,7 +1137,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   max-width: 808px;
   align-self: start;
 }
-.about .grid_wrap .description .description_row {
+.about .grid_wrap .description > p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 24px;
   font-style: normal;
@@ -1145,11 +1145,11 @@ section .transparent_cards_wrap .transparent_cards_item .description {
   line-height: 28px;
   margin-bottom: 30px;
 }
-.about .grid_wrap .description .description_row:last-child {
+.about .grid_wrap .description > p:last-child {
   margin-bottom: 0;
 }
 @media screen and (max-width: 520px) {
-  .about .grid_wrap .description .description_row {
+  .about .grid_wrap .description > p {
     font-size: 16px;
     line-height: 20px;
   }
@@ -1562,6 +1562,7 @@ section .transparent_cards_wrap .transparent_cards_item .description {
 .contact_us .transparent_box .curve_line {
   right: -34%;
   top: -200px;
+  max-width: 1200px;
 }
 @media screen and (max-width: 1400px) {
   .contact_us .transparent_box .curve_line {
