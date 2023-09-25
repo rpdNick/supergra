@@ -1,4 +1,3 @@
-// Menu scroll
 const smoothScroll = function (targetEl, duration) {
     const headerElHeight =
       document.querySelector(".main_header").clientHeight + 10;
