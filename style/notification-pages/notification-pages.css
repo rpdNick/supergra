@@ -1,6 +1,6 @@
 .result_page .result_content {
   padding: 60px 0 104px;
-  min-height: calc(100svh - 438px);
+  min-height: calc(100svh - 328px);
 }
 .result_page .result_content .result_wrap {
   padding-top: 64px;
