@@ -9,46 +9,40 @@ $color-white: #fff;
 
     .result_content {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 24px;
         padding: 60px 0 104px;
         min-height: calc(100svh - 328px);
 
-        .result_wrap {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
+        .result_image {
+            width: 100%;
+        }
 
-            .result_image {
-                width: 100%;
-            }
+        .message {
+            color: $color-white;
+            text-align: center;
+            text-shadow:
+                0px 0px 127.79053497314453px rgba(49, 119, 255, 0.5),
+                0px 0px 33.009559631347656px rgba(49, 119, 255, 0.7);
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 60px;
+            margin: 42px 0;
+            max-width: 770px;
 
-            .message {
-                color: $color-white;
-                text-align: center;
-                text-shadow:
-                    0px 0px 127.79053497314453px rgba(49, 119, 255, 0.5),
-                    0px 0px 33.009559631347656px rgba(49, 119, 255, 0.7);
-                font-size: 36px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 60px;
-                margin: 42px 0;
-                max-width: 770px;
-
-                @media screen and (max-width: 520px) {
-                    font-size: 16px;
-                    line-height: normal;
-                }
-            }
-
-            .button {
-                min-width: 200px;
+            @media screen and (max-width: 520px) {
+                font-size: 16px;
+                line-height: normal;
             }
         }
 
+        .button {
+            min-width: 200px;
+        }
+        
         &.error_content {
             .result_image {
                 max-width: 800px;
