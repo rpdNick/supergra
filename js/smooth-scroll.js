@@ -30,7 +30,7 @@ const smoothScroll = function (targetEl, duration) {
         if (item.classList.contains("menu_item_popup")) {
           closePopup(item);
         }
-        const currentTarget = this.getAttribute("href");
+        const currentTarget = this.getAttribute("data-scroll");
         smoothScroll(currentTarget, 800);
       });
     });

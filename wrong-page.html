@@ -24,13 +24,25 @@
             <a class="logo" href="index.html">
                 <img src="./img/logo.svg" alt="logo">
             </a>
-            <button href="#footer" class="button primary scroll-to contact_btn">
+            <nav class="menu_main horizontal">
+                <a href="index.html#about" class="menu_item scroll-to" data-scroll="#about">Про нас</a>
+                <a href="index.html#advantages" class="menu_item scroll-to" data-scroll="#advantages">Переваги</a>
+                <a href="index.html#partners" class="menu_item scroll-to" data-scroll="#partners">Партнери</a>
+                <a href="index.html#valuables" class="menu_item scroll-to" data-scroll="#valuables">Цінності</a>
+                <a href="index.html#why_choose_us" class="menu_item scroll-to" data-scroll="#why_choose_us">Чому ми?</a>
+                <a href="index.html#vacancy" class="menu_item scroll-to" data-scroll="#vacancy">Вакансії</a>
+                <a href="#" class="menu_item scroll-to" data-scroll="#footer">Контакти</a>
+            </nav>
+            <a href="index.html#contact_us" class="button primary scroll-to contact_btn">
                 <span class="caption">Зв'яжіться з нами</span>
-            </button>
+            </a>
             <div class="buttons_wrap">
-                <a href="#footer" class="button circular primary scroll-to contact_btn_mob">
+                <a href="index.html#contact_us" class="button circular primary scroll-to contact_btn_mob" data-scroll="#contact_us">
                     <i class="icon icon-phone"></i>
                 </a>
+                <button class="button circular button_blue" id="menu_button">
+                    <i class="icon icon-menu"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -86,9 +98,29 @@
             </div>
             <i class="circle"></i>
         </footer>
+        <div class="overlay"></div>
+        <div class="popup popup_menu container responsive_wrapper" id="menu">
+            <div class="popup_header">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+                <button class="button circular button_blue button_close">
+                    <i class="icon icon-close"></i>
+                </button>
+            </div>
+            <div class="menu_list">
+                <a href="index.html#about" class="menu_item_popup scroll-to">Про нас</a>
+                <a href="index.html#advantages" class="menu_item_popup scroll-to">Переваги</a>
+                <a href="index.html#partners" class="menu_item_popup scroll-to">Партнери</a>
+                <a href="index.html#valuables" class="menu_item_popup scroll-to">Цінності</a>
+                <a href="index.html#why_choose_us" class="menu_item_popup scroll-to">Чому ми?</a>
+                <a href="index.html#vacancy" class="menu_item_popup scroll-to">Вакансії</a>
+                <a href="#" class="menu_item_popup scroll-to" data-scroll="#footer">Контакти</a>
+            </div>
+        </div>
     </main>
-
     <script src="./js/smooth-scroll.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
