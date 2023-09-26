@@ -211,6 +211,38 @@ a {
   background: rgba(15, 15, 21, 0.6);
 }
 
+.marked {
+  position: relative;
+  padding-left: 30px;
+}
+.marked::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  transform: translateY(50%);
+  left: 0;
+  height: calc(100% - 8px);
+  width: 8px;
+  background: #0066ff;
+  border: 0.25rem solid #82d9ff;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  box-shadow: 0 0 12px #0066ff, inset 0 0 4px #0066ff, 0 0 20px 4px #0066ff, inset 0 0 12px #0066ff, 0 0 12px #0066ff, inset 0 0 4rem #0066ff;
+  z-index: 2;
+}
+@media screen and (max-width: 520px) {
+  .marked::before {
+    width: 4px;
+    box-shadow: 0 0 5px #0066ff, inset 0 0 4px #0066ff, 0 0 12px 4px #0066ff, inset 0 0 12px #0066ff, 0 0 5px #0066ff, inset 0 0 4rem #0066ff;
+  }
+}
+@media screen and (max-width: 520px) {
+  .marked {
+    padding-left: 20px;
+  }
+}
+
 .circle {
   position: absolute;
   background-position: center;
