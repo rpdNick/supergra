@@ -44,6 +44,11 @@
   max-width: 206px;
 }
 @media screen and (max-width: 520px) {
+  .result_page .result_content.success_content .result_image {
+    max-width: 170px;
+  }
+}
+@media screen and (max-width: 520px) {
   .result_page .result_content {
     min-height: -moz-fit-content;
     min-height: fit-content;

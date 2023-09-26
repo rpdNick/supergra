@@ -55,6 +55,10 @@ $color-white: #fff;
         &.success_content {
             .result_image {
                 max-width: 206px;
+
+                @media screen and (max-width: 520px) {
+                    max-width: 170px;
+                 }
             }
         }
 
