@@ -78,7 +78,7 @@ function removeValidationError(errorElement) {
   errorElement.closest(".form_item").classList.remove("error");
 }
 
-/** File attachment validation */
+/** File attachment logic */
 let addFileBtn = document.querySelectorAll(".attach_file");
 
 addFileBtn.forEach(function (button) {
@@ -88,7 +88,7 @@ addFileBtn.forEach(function (button) {
 });
 
 function flileActions(button) {
-  let fileInput = button.closest(".file_item").querySelector(".attachment");
+  let fileInput = button.closest(".file_item").querySelector('input[type="file"]');
   if (fileInput.files.length === 0) {
     // Attach file
     addFile(button, fileInput);
