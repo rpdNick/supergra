@@ -39,7 +39,6 @@ forms.forEach((form) => {
         }
 
         requiredElements[i].addEventListener("change", () => {
-          console.log(requiredElements[i].files.length)
           if (requiredElements[i].files.length > 0) {
             removeValidationError(requiredElements[i]);
           }
@@ -84,7 +83,6 @@ function showValidationError(errorElement) {
 }
 
 function removeValidationError(errorElement) {
-  console.log(errorElement.closest(".form_item"))
   errorElement.closest(".form_item").classList.remove("error");
 }
 
@@ -120,7 +118,6 @@ function addFile(button, fileInput) {
         fileInput.closest(".file_item").querySelector(".file_label").innerText =
           fileName;
       } else {
-        console.log("File is more than 2MB!");
         showValidationError(fileInput);
         fileInput.value = "";
       }
