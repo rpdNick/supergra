@@ -448,6 +448,16 @@ a {
                 }
             }
 
+            .checkbox_label {
+                &.checked {
+                    .checkbox {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
             .checkbox_txt {
                 color: $color-white;
                 font-size: 16px;

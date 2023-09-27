@@ -4,7 +4,7 @@ forms.forEach((form) => {
     e.preventDefault();
 
     let erroreArrayElemnts = [];
-    let requiredElements = form.querySelectorAll("input[data-required]");
+    let requiredElements = form.querySelectorAll("[data-required]");
     for (let i = 0; i < requiredElements.length; i++) {
       let elType = requiredElements[i].getAttribute("type");
       if (elType == "text" || elType == "tel") {
@@ -19,7 +19,10 @@ forms.forEach((form) => {
       }
 
       if (elType == "email") {
-        if (!validateEmail(requiredElements[i].value) || requiredElements[i].value == "") {
+        if (
+          !validateEmail(requiredElements[i].value) ||
+          requiredElements[i].value == ""
+        ) {
           showValidationError(requiredElements[i]);
           erroreArrayElemnts.push(requiredElements[i]);
         }
@@ -30,29 +33,36 @@ forms.forEach((form) => {
       }
 
       if (elType == "file") {
-
         if (requiredElements[i].files.length == 0) {
           showValidationError(requiredElements[i]);
           erroreArrayElemnts.push(requiredElements[i]);
         }
 
-        requiredElements[i].addEventListener("change", () => {      
+        requiredElements[i].addEventListener("change", () => {
+          console.log(requiredElements[i].files.length)
           if (requiredElements[i].files.length > 0) {
             removeValidationError(requiredElements[i]);
           }
         });
       }
 
-      if (elType == "checkbox") {
-        if (!requiredElements[i].checked) {
-          showValidationError(requiredElements[i]);
+      if (requiredElements[i].classList.contains("checkbox_label")) {
+        if (!requiredElements[i].classList.contains("checked")) {
           erroreArrayElemnts.push(requiredElements[i]);
+          showValidationError(requiredElements[i]);
         }
-
-        requiredElements[i].addEventListener("change", () => {      
-          removeValidationError(requiredElements[i]);
-        });
       }
+
+      // if (elType == "checkbox") {
+      //   if (!requiredElements[i].checked) {
+      //     showValidationError(requiredElements[i]);
+      //     erroreArrayElemnts.push(requiredElements[i]);
+      //   }
+
+      //   requiredElements[i].addEventListener("change", () => {
+      //     removeValidationError(requiredElements[i]);
+      //   });
+      // }
     }
 
     if (erroreArrayElemnts.length == 0) {
@@ -69,12 +79,12 @@ function validateEmail(email) {
   return expr.test(email);
 }
 
-
 function showValidationError(errorElement) {
   errorElement.closest(".form_item").classList.add("error");
 }
 
 function removeValidationError(errorElement) {
+  console.log(errorElement.closest(".form_item"))
   errorElement.closest(".form_item").classList.remove("error");
 }
 
@@ -88,7 +98,9 @@ addFileBtn.forEach(function (button) {
 });
 
 function flileActions(button) {
-  let fileInput = button.closest(".file_item").querySelector('input[type="file"]');
+  let fileInput = button
+    .closest(".file_item")
+    .querySelector('input[type="file"]');
   if (fileInput.files.length === 0) {
     // Attach file
     addFile(button, fileInput);
@@ -122,3 +134,13 @@ function removeFile(button, fileInput) {
   fileInput.closest(".file_item").querySelector(".file_label").innerText =
     "Додати файл";
 }
+
+let formCheckbox = document.querySelectorAll(".checkbox_item .checkbox_label");
+formCheckbox.forEach((checkboxItem) => {
+  checkboxItem.addEventListener("click", function () {
+    this.classList.toggle("checked");
+    if (checkboxItem.classList.contains("checked")) {
+      removeValidationError(checkboxItem);
+    }
+  });
+});

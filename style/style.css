@@ -385,6 +385,9 @@ a {
   opacity: 0;
   transition: 0.3s;
 }
+.form_container .form_actions .checkbox_item .checkbox_label.checked .checkbox::before {
+  opacity: 1;
+}
 .form_container .form_actions .checkbox_item .checkbox_txt {
   color: #fff;
   font-size: 16px;
